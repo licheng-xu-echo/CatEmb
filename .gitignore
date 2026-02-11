@@ -7,4 +7,7 @@ __pycache__/
 .ipynb_checkpoints
 RXNEmb/
 gen_desc/
-catemb/model_path/
+model_path/
+save_model/
+temp/
+for_manu/
