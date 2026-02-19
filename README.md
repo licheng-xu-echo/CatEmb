@@ -1,0 +1,6 @@
+# CatEmb
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-orange)](https://ubuntu.com/) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/) [![PyTorch 2.6.0+cu124](https://img.shields.io/badge/PyTorch-2.6.0%2Bcu124-red)](https://pytorch.org/) [![PyG 2.7.0](https://img.shields.io/badge/torch__geometric-2.7.0-green)](https://pytorch-geometric.readthedocs.io/) [![RDKit](https://img.shields.io/badge/Chemoinformatics-RDKit-blueviolet)](https://www.rdkit.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Official implementation of *"Stereoelectronic-aware catalyst embeddings from 2D graphs via 2D-3D multi-view alignment"*
+
+CatEmb​ is a novel, stereoelectronic-aware molecular descriptor that generates compact, fixed-length embeddings directly from 2D molecular graphs. It bridges the gap between readily accessible 2D structural inputs and the decisive 3D stereoelectronic properties essential for data-driven catalyst discovery.
