@@ -5,12 +5,12 @@ from torch_scatter import scatter
 from .data import build_graph_input
 cur_path = os.path.dirname(__file__)
 class CatEmb():
-    def __init__(self, model_path=f"{cur_path}/model_path/dim64LN", device='cpu'):
+    def __init__(self, model_path=f"{cur_path}/model_path/dim32LN", device='cpu'):
         self.model_path = model_path
         self.device = device
         
         self.full_params = np.load(f"{self.model_path}/full_params.npy",allow_pickle=True).item()
-        self.model_params = torch.load(f"{self.model_path}/best_model.pt", map_location=torch.device('cpu'))
+        self.model_params = torch.load(f"{self.model_path}/best_model.pt", map_location=torch.device('cpu'),weights_only=False)
         
         
         clmodel = CL2D3DMol(param_2d=self.full_params['param_2d'], param_3d=self.full_params['param_3d'],reduce=self.full_params['param_cl']['reduce'])
