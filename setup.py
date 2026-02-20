@@ -1,6 +1,10 @@
 import os
 from setuptools import setup,find_packages
-
+def read_requirements():
+    base_dir = os.path.abspath(os.path.dirname(__file__))
+    req_path = os.path.join(base_dir, 'requirements.txt')
+    with open(req_path) as f:
+        return [line.strip() for line in f if line.strip() and not line.startswith('#')]
 setup(
     name="catemb",
     version="1.0",
@@ -13,6 +17,6 @@ setup(
     packages=find_packages(),
     install_package_data=True,
     zip_safe=False,
-    install_requires=[],
+    install_requires=read_requirements(),
     package_data={"":["*.csv","*.pt","*.npy"]},
 )
