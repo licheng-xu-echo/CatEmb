@@ -13,7 +13,7 @@ pt = Chem.GetPeriodicTable()
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=str, default="./dataset/processed", help="data path")
-    parser.add_argument("--data_file", type=str, default="lig_cat_dataset_xtbopt_new_62755", help="data file")
+    parser.add_argument("--data_file", type=str, default="catcompdb", help="data file")
     parser.add_argument("--trunc", type=int, default=0, help="truncation of dataset")
     parser.add_argument("--read_coord", type=str_to_bool, default=True, help="read coordinates from data file")
     parser.add_argument("--batch_size", type=int, default=4, help="batch size")
