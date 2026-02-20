@@ -1,5 +1,6 @@
 import numpy as np
 from copy import deepcopy
+
 def random_init(cat_score_lst, leave_best_topk=3, batch_size=5, rand_seed=42):
     print(f"best {leave_best_topk} catalyst label:",[item[1] for item in cat_score_lst[-leave_best_topk:]])
     if leave_best_topk > 0:
@@ -69,6 +70,45 @@ def recommend_by_random(cur_score,cur_cat,pool_cat,batch_size=5):
     cur_cat_smi_lst = [cat[0] for cat in cur_cat]
     cur_score = np.concatenate([cur_score,recommend_score])
     pool_cat = [cat for idx,cat in enumerate(pool_cat) if not cat[0] in cur_cat_smi_lst]
+    print(f"{len(pool_cat)}, {len(cur_cat)}")
+    print(f"Max score: {np.max(cur_score):.4f}, {len(cur_score)}")
+    return cur_score,cur_cat,pool_cat
+
+def recommend_by_model(cur_score,cur_cat,pool_cat,rct12_pdt_pair_set,rxn_smi_fp_map,rxn_smi_label_map,model,batch_size=5):
+    
+    cur_cat_smi_lst = [item[0] for item in cur_cat]
+    pool_cat_smi_lst = [item[0] for item in pool_cat]
+    cur_rxn_smi_lst = []
+    pool_rxn_smi_lst = []
+    for cat_smi in cur_cat_smi_lst:
+        for rct12_pdt_pair in rct12_pdt_pair_set:
+            rxn_smi = f"{rct12_pdt_pair[0]}.{rct12_pdt_pair[1]}>{cat_smi}>{rct12_pdt_pair[2]}"
+            cur_rxn_smi_lst.append(rxn_smi)
+    for cat_smi in pool_cat_smi_lst:
+        for rct12_pdt_pair in rct12_pdt_pair_set:
+            rxn_smi = f"{rct12_pdt_pair[0]}.{rct12_pdt_pair[1]}>{cat_smi}>{rct12_pdt_pair[2]}"
+            pool_rxn_smi_lst.append(rxn_smi)
+    cur_train_x = np.array([rxn_smi_fp_map[smi] for smi in cur_rxn_smi_lst])
+    cur_train_y = np.array([rxn_smi_label_map[smi] for smi in cur_rxn_smi_lst])
+    pool_x = np.array([rxn_smi_fp_map[smi] for smi in pool_rxn_smi_lst])
+    model.fit(cur_train_x,cur_train_y)
+    pool_pred = model.predict(pool_x)
+    pool_cat_smi_pred_map = {}
+    for rxn_smi,pred in zip(pool_rxn_smi_lst,pool_pred):
+        cat_smi = rxn_smi.split(">")[1]
+        if cat_smi not in pool_cat_smi_pred_map:
+            pool_cat_smi_pred_map[cat_smi] = []
+        pool_cat_smi_pred_map[cat_smi].append(pred)
+    pool_cat_smi_ave_pred_lst = sorted([[cat_smi,np.mean(pred_lst)] for cat_smi,pred_lst in pool_cat_smi_pred_map.items()],key=lambda x:-x[1])
+    recommend_cat_smi_lst = [item[0] for item in pool_cat_smi_ave_pred_lst[:batch_size]]
+    recommend_cat = [cat for cat in pool_cat if cat[0] in recommend_cat_smi_lst]
+    recommend_score = np.array([cat[1] for cat in recommend_cat])
+
+    cur_cat = cur_cat + recommend_cat
+    cur_cat_smi_lst = [cat[0] for cat in cur_cat]
+    cur_score = np.concatenate([cur_score,recommend_score])
+    pool_cat = [cat for idx,cat in enumerate(pool_cat) if not cat[0] in cur_cat_smi_lst]
+    pool_cat_smi_lst = [cat[0] for cat in pool_cat]
     print(f"{len(pool_cat)}, {len(cur_cat)}")
     print(f"Max score: {np.max(cur_score):.4f}, {len(cur_score)}")
     return cur_score,cur_cat,pool_cat
