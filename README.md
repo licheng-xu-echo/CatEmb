@@ -1,7 +1,7 @@
 # CatEmb
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-orange)](https://ubuntu.com/) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/) [![PyTorch 2.6.0+cu124](https://img.shields.io/badge/PyTorch-2.6.0%2Bcu124-red)](https://pytorch.org/) [![PyG 2.7.0](https://img.shields.io/badge/torch__geometric-2.7.0-green)](https://pytorch-geometric.readthedocs.io/) [![RDKit](https://img.shields.io/badge/Chemoinformatics-RDKit-blueviolet)](https://www.rdkit.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Official implementation of *"Stereoelectronic-aware catalyst embeddings from 2D graphs via 2D-3D multi-view alignment"*
+Official implementation of *"Stereoelectronic-aware catalyst embeddings from 2D graphs via 2D-3D multi-view alignment"*. The corresponding paper is under review. Preprint version is available at [ChemRxiv](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15000279/v1).
 
 CatEmb​ is a novel, stereoelectronic-aware molecular descriptor that generates compact, fixed-length embeddings directly from 2D molecular graphs (e.g. SMILES). It bridges the gap between readily accessible 2D structural inputs and the decisive 3D stereoelectronic properties essential for data-driven catalyst discovery.
 
@@ -97,4 +97,19 @@ This repository includes several Jupyter notebooks that demonstrate key function
 * **ligand_recommend.ipynb**: Implements a catalyst recommendation strategy based on CatEmb similarity (random and model-based methods are also included), useful for prioritizing experiments in high-throughput screening.
 
 ## Citation
-The paper is under review.
+
+Li-Cheng Xu, Fenglei Cao, Yuan Qi. Stereoelectronic-aware catalyst embeddings from 2D graphs via 2D-3D multi-view alignment. *ChemRxiv* **2026** DOI: 10.26434/chemrxiv.15000279/v1
+```
+@article{xu_2026_catemb,
+    author = {Li-Cheng Xu  and Fenglei Cao  and Yuan Qi },
+    title = {Stereoelectronic-aware catalyst embeddings from 2D graphs via 2D-3D multi-view alignment},
+    journal = {ChemRxiv},
+    volume = {2026},
+    number = {0222},
+    pages = {},
+    year = {2026},
+    doi = {10.26434/chemrxiv.15000279/v1},
+    URL = {https://chemrxiv.org/doi/abs/10.26434/chemrxiv.15000279/v1},
+    eprint = {https://chemrxiv.org/doi/pdf/10.26434/chemrxiv.15000279/v1}
+}
+```
