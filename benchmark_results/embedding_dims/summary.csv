@@ -1,0 +1,11 @@
+dim,alignment_2d3d,repr_sample_size,model_dir
+8,1.4886505603790283,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim8LN
+16,1.3574066162109375,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim16LN
+32,1.3249621391296387,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim32LN
+64,1.3758240938186646,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim64LN
+128,1.3368642330169678,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim128LN
+256,1.3408477306365967,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim256LN
+512,1.34865140914917,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim512LN
+1024,1.3355023860931396,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim1024LN
+2048,1.3452861309051514,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim2048LN
+4096,1.3226069211959839,4096,/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model/dim4096LN
