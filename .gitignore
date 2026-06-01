@@ -6,7 +6,7 @@ download/dataset/*
 __pycache__/
 .ipynb_checkpoints
 RXNEmb/
-model_path/
+catemb/model_path/dim*LN/
 save_model/
 temp/
 for_manu/

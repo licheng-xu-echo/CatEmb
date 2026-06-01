@@ -5,8 +5,13 @@ from torch_scatter import scatter
 from .data import build_graph_input
 cur_path = os.path.dirname(__file__)
 class CatEmb():
-    def __init__(self, model_path=f"{cur_path}/model_path/dim32LN", device='cpu'):
-        self.model_path = model_path
+    def __init__(self, model_path=f"{cur_path}/model_path/dim32LN", model_dim=None, device='cpu'):
+        if model_dim is None:
+            self.model_path = model_path
+        else:
+            assert model_dim in [8,16,32,64,128,256,512,1024,2048,4096], "model_dim must be in [8,16,32,64,128,256,512,1024,2048,4096]"
+            self.model_path = f"{cur_path}/model_path/dim{model_dim}LN"
+            
         self.device = device
         
         self.full_params = np.load(f"{self.model_path}/full_params.npy",allow_pickle=True).item()

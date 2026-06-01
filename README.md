@@ -21,13 +21,36 @@ CatEmb​ is a novel, stereoelectronic-aware molecular descriptor that generates
 git clone https://github.com/licheng-xu-echo/CatEmb.git
 cd CatEmb
 ```
+
+We recommend using `conda` to manage the environment.
+```
+# Create and activate a new conda environment
+conda create -n catemb python=3.12 -y
+conda activate catemb
+
+# Install dependencies from requirements.txt
+pip install -r requirements.txt -f https://data.pyg.org/whl/torch-2.6.0+cu124.html --extra-index-url https://download.pytorch.org/whl/cu124
+```
+
 **2. Download pretrained model weights**
-Download the trained CatEmb model [weights](http://doi.org/10.6084/m9.figshare.31375579) (`dim[8~4096]LN.tar.gz`) and extract the archive. Place the extracted folder (model_path/) into the project's `catemb` directory.
+
+**Option 1:** Download from modelscope (recommended)
+```bash
+# there are 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 dimensional CatEmb models
+cd catemb
+modelscope download --model 'XuLiCheng2025/CatEmb' --include 'model_path/dim*' --local_dir '.'
+cd ..
+```
+
+**Option 2:** Download the trained CatEmb model [weights](http://doi.org/10.6084/m9.figshare.31375579) (`dim[8~4096]LN.tar.gz`) and extract the archive. Place the extracted folder (model_path/) into the project's `catemb` directory.
+
 ```
 CatEmb/
 ├── catemb/
 │   ├── model_path/
-│   │   └── dim32LN/          # Contains the trained model checkpoints
+│   │   └── dim8LN/          # Contains the trained model checkpoints
+│   │   ├── dim16LN/          # Contains the trained model checkpoints
+│   |   └── ... (other model folders)
 │   ├── __init__.py
 │   ├── data.py
 │   └── ... (other source files)
@@ -37,24 +60,18 @@ CatEmb/
 ```
 **3. Set up the environment and install**
 
-We recommend using `conda` to manage the environment.
-```
-# Create and activate a new conda environment
-conda create -n catemb python=3.12
-conda activate catemb
 
-# Install dependencies from requirements.txt
-pip install -r requirements.txt -f https://data.pyg.org/whl/torch-2.6.0+cu124.html --extra-index-url https://download.pytorch.org/whl/cu124
-
-# Install the catemb package in development mode
-pip install -e .
+```bash
+# Install the catemb package
+pip install .
 ```
 
 ## Basic usage
 
 ```python
 from catemb import CatEmb
-catemb_calc = CatEmb(device='cpu')
+catemb_calc = CatEmb(device='cpu') # default dimension is 32
+# catemb_calc = CatEmb(device='cpu', model_dim=4096) # specify the dimension.
 cat_smi_lst = ['CN(C)c1ccc(P(C2CCCCC2)C2CCCCC2)cc1',
                'COc1ccc(OC)c(P(C2CCCCC2)C2CCCCC2)c1-c1c(C(C)C)cc(C(C)C)cc1C(C)C']
 desc = catemb_calc.gen_desc(cat_smi_lst)
