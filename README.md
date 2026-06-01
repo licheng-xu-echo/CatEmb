@@ -22,7 +22,7 @@ git clone https://github.com/licheng-xu-echo/CatEmb.git
 cd CatEmb
 ```
 **2. Download pretrained model weights**
-Download the trained CatEmb model [weights](http://doi.org/10.6084/m9.figshare.31375579) (`model_path.tar.gz`) and extract the archive. Place the extracted folder (model_path/) into the project's `catemb` directory.
+Download the trained CatEmb model [weights](http://doi.org/10.6084/m9.figshare.31375579) (`dim[8~4096]LN.tar.gz`) and extract the archive. Place the extracted folder (model_path/) into the project's `catemb` directory.
 ```
 CatEmb/
 ├── catemb/
@@ -89,12 +89,25 @@ python train.py --batch_size 4 --epoch 100 --tag test
 More arguments and their instructions can be found in the `train.py` file.
 
 ## Notebooks
-This repository includes several Jupyter notebooks that demonstrate key functionalities and analyses:
+This repository includes several Jupyter notebooks in `notebook` folder that demonstrate key functionalities and analyses.
 
-* **build_dataset.ipynb**: Walks through the process of building the CatCompDB dataset from raw data.
-* **ligand_analysis.ipynb**: Shows how to use CatEmb descriptors with t-SNE for visualizing and analyzing ligand clustering in chemical space.
-* **qspr_*_catemb.ipynb**: Demonstrates how incorporating CatEmb descriptors as features for catalysts/ligands can improve the accuracy of quantitative structure-performance relationship (QSPR) models.
-* **ligand_recommend.ipynb**: Implements a catalyst recommendation strategy based on CatEmb similarity (random and model-based methods are also included), useful for prioritizing experiments in high-throughput screening.
+## Scripts
+To run QSPR benchmark, you can use the following command:
+```bash
+conda run -n catemb python scripts/qsrp_morgan.py --dataset both
+conda run -n rxnfp python scripts/qspr_rxnfp.py --dataset both
+conda run -n 3DInfomax python scripts/qspr_3dinfomax.py --dataset both --mode both
+conda run -n unimol python scripts/qspr_unimol2.py --dataset both --mode both
+conda run -n catemb python scripts/qspr_catemb_all.py --dataset both --mode both
+conda run -n catemb python scripts/qspr_morgan_catemb.py --dataset both --mode both
+conda run -n catemb python scripts/qspr_rxnfp_catemb.py
+```
+Note: To run [unimol](https://github.com/deepmodeling/unimol_tools), [3dinfomax](https://github.com/HannesStark/3DInfomax), you need prepare the environment first.
+
+To run 2D-3D alignment benchmark, you can use the following command:
+```bash
+conda run -n catemb python scripts/benchmark_embedding_dims.py
+```
 
 ## Citation
 
