@@ -1,0 +1,13 @@
+strategy_name,model_type,repr_dim,reaction_feature_dim,split,n_samples,r2,mae,rmse
+thiol_addition_3dinfomax_imine_thiol_catalyst,KernelRidge,256,768,catalyst_oos,304,0.20205181597028798,0.4871552330019373,0.6263254196159458
+thiol_addition_3dinfomax_imine_thiol_catalyst,ExtraTrees,256,768,catalyst_oos,304,0.14360646648123476,0.49696102816705895,0.6488575798597332
+thiol_addition_3dinfomax_imine_thiol_catalyst,SVR,256,768,catalyst_oos,304,0.044467898646303516,0.5279007481327527,0.6853861649721861
+thiol_addition_3dinfomax_imine_thiol_catalyst,Ridge,256,768,catalyst_oos,304,-1.4335737381111806,0.7333586291276463,1.093792516543367
+thiol_addition_3dinfomax_imine_thiol_catalyst,SVR,256,768,substrate_catalyst_oos,171,0.15595705590154063,0.5169685071618437,0.674562658973559
+thiol_addition_3dinfomax_imine_thiol_catalyst,ExtraTrees,256,768,substrate_catalyst_oos,171,0.13945970265790086,0.5150790462727132,0.6811231338804064
+thiol_addition_3dinfomax_imine_thiol_catalyst,KernelRidge,256,768,substrate_catalyst_oos,171,-0.9096254020931123,0.7862918409786884,1.0146449927023113
+thiol_addition_3dinfomax_imine_thiol_catalyst,Ridge,256,768,substrate_catalyst_oos,171,-1.3269828748806933,0.764341273384221,1.12004795772398
+thiol_addition_3dinfomax_imine_thiol_catalyst,ExtraTrees,256,768,substrate_oos,216,0.9133555749348136,0.1447999070672591,0.20353990611075007
+thiol_addition_3dinfomax_imine_thiol_catalyst,Ridge,256,768,substrate_oos,216,0.8909323563522854,0.17171032093017594,0.22836377994814766
+thiol_addition_3dinfomax_imine_thiol_catalyst,SVR,256,768,substrate_oos,216,0.5042330032466449,0.3724107473095107,0.4868756601802874
+thiol_addition_3dinfomax_imine_thiol_catalyst,KernelRidge,256,768,substrate_oos,216,-0.4177163776140793,0.6583075555486294,0.8233299917625765

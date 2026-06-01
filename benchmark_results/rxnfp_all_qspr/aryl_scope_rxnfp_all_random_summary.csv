@@ -1,0 +1,5 @@
+strategy_name,model_type,reaction_feature_dim,rxnfp_encoding,r2_mean,r2_std,mae_mean,mae_std,rmse_mean,rmse_std
+aryl_scope_rxnfp_all_with_ligand_product,Ridge,256,electrophile.nucleophile.ligand>>product,0.5909818945588251,0.051130813242472886,13.967290417251292,0.5740130354374723,18.704997773021624,1.084727199990391
+aryl_scope_rxnfp_all_with_ligand_product,KernelRidge,256,electrophile.nucleophile.ligand>>product,0.5653688130411905,0.04577098376742601,14.363304619388066,0.6458622190848163,19.295234898931472,0.8924250517625747
+aryl_scope_rxnfp_all_with_ligand_product,ExtraTrees,256,electrophile.nucleophile.ligand>>product,0.5295831210017063,0.05047995459297591,14.665400207792212,0.6695323788522757,20.07390767453545,0.9438790303392108
+aryl_scope_rxnfp_all_with_ligand_product,SVR,256,electrophile.nucleophile.ligand>>product,0.5253243996577633,0.05811026820481219,14.385646961377796,0.7776983375339545,20.160717410475733,1.2072235345253286

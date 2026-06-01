@@ -1,0 +1,479 @@
+{
+  "task": "Thiol addition / acetal dataset",
+  "model_name": "MorganFingerprint",
+  "radius": 2,
+  "n_bits": 2048,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "searched_model_types": [
+    "ExtraTrees",
+    "Ridge",
+    "KernelRidge",
+    "SVR"
+  ],
+  "n_estimators": 500,
+  "random_results": [
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "ExtraTrees",
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.8563549243901312,
+        "r2_std": 0.014536528949994892,
+        "mae_mean": 0.17593832036446191,
+        "mae_std": 0.008827149129775141,
+        "rmse_mean": 0.26636866640005286,
+        "rmse_std": 0.01521711851127547
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8378388728475283,
+          "mae": 0.18621573077201675,
+          "rmse": 0.27808534413994124
+        },
+        {
+          "seed": 1,
+          "r2": 0.8712920789887293,
+          "mae": 0.1629155370127617,
+          "rmse": 0.24194482612707605
+        },
+        {
+          "seed": 2,
+          "r2": 0.8540661625911533,
+          "mae": 0.17750036526589466,
+          "rmse": 0.2742527583851272
+        },
+        {
+          "seed": 3,
+          "r2": 0.8669298137251444,
+          "mae": 0.16648793074649212,
+          "rmse": 0.256566167862479
+        },
+        {
+          "seed": 4,
+          "r2": 0.8724005327489712,
+          "mae": 0.17213928815417737,
+          "rmse": 0.2537652485254108
+        },
+        {
+          "seed": 5,
+          "r2": 0.8598152958315088,
+          "mae": 0.17652394981139813,
+          "rmse": 0.2627641348138102
+        },
+        {
+          "seed": 6,
+          "r2": 0.8460852212549873,
+          "mae": 0.17771556796448787,
+          "rmse": 0.27602941345096194
+        },
+        {
+          "seed": 7,
+          "r2": 0.8711613827331245,
+          "mae": 0.16868471543427793,
+          "rmse": 0.25361274867866135
+        },
+        {
+          "seed": 8,
+          "r2": 0.8522598396369407,
+          "mae": 0.17939313732484694,
+          "rmse": 0.27362390109666657
+        },
+        {
+          "seed": 9,
+          "r2": 0.8317000435432238,
+          "mae": 0.19180698115826555,
+          "rmse": 0.2930421209203942
+        }
+      ]
+    },
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "Ridge",
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.8655242513408435,
+        "r2_std": 0.009391001212591106,
+        "mae_mean": 0.18496735532984684,
+        "mae_std": 0.004579772360786694,
+        "rmse_mean": 0.25773483562781146,
+        "rmse_std": 0.007191108149998426
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8497278646424283,
+          "mae": 0.18971749955900427,
+          "rmse": 0.26769727640876556
+        },
+        {
+          "seed": 1,
+          "r2": 0.8579187916178086,
+          "mae": 0.1830664950926278,
+          "rmse": 0.25420379085141653
+        },
+        {
+          "seed": 2,
+          "r2": 0.8654014260667396,
+          "mae": 0.18299164944692467,
+          "rmse": 0.263386330839823
+        },
+        {
+          "seed": 3,
+          "r2": 0.8643687736345914,
+          "mae": 0.17887168315267066,
+          "rmse": 0.2590233103477946
+        },
+        {
+          "seed": 4,
+          "r2": 0.8682864334526876,
+          "mae": 0.18561532670526218,
+          "rmse": 0.25782378059361305
+        },
+        {
+          "seed": 5,
+          "r2": 0.8695892714854325,
+          "mae": 0.18657382522061788,
+          "rmse": 0.25343840867374834
+        },
+        {
+          "seed": 6,
+          "r2": 0.8568532956264401,
+          "mae": 0.193781953291675,
+          "rmse": 0.2661986681684242
+        },
+        {
+          "seed": 7,
+          "r2": 0.8701946180452099,
+          "mae": 0.18530658742219766,
+          "rmse": 0.25456248574849977
+        },
+        {
+          "seed": 8,
+          "r2": 0.8685434688915334,
+          "mae": 0.18515937236952354,
+          "rmse": 0.25810465146229433
+        },
+        {
+          "seed": 9,
+          "r2": 0.8843585699455637,
+          "mae": 0.1785891610379648,
+          "rmse": 0.24290965318373556
+        }
+      ]
+    },
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "KernelRidge",
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.7564983453073584,
+        "r2_std": 0.012964644270936692,
+        "mae_mean": 0.2533797620704547,
+        "mae_std": 0.008365805658062825,
+        "rmse_mean": 0.34711996217263075,
+        "rmse_std": 0.014034315941508974
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.7461242230473619,
+          "mae": 0.25011971419829915,
+          "rmse": 0.34794881079191825
+        },
+        {
+          "seed": 1,
+          "r2": 0.7841275569425321,
+          "mae": 0.23879279779680562,
+          "rmse": 0.3133374501735274
+        },
+        {
+          "seed": 2,
+          "r2": 0.7529154108973264,
+          "mae": 0.25792106376550705,
+          "rmse": 0.35685832481133656
+        },
+        {
+          "seed": 3,
+          "r2": 0.770037144792357,
+          "mae": 0.23990373434459097,
+          "rmse": 0.3372778736277627
+        },
+        {
+          "seed": 4,
+          "r2": 0.7452336350175872,
+          "mae": 0.26355385051221003,
+          "rmse": 0.35857397265363405
+        },
+        {
+          "seed": 5,
+          "r2": 0.7532188799000656,
+          "mae": 0.25630543469954625,
+          "rmse": 0.3486356049555868
+        },
+        {
+          "seed": 6,
+          "r2": 0.7591657663558373,
+          "mae": 0.2513033896656745,
+          "rmse": 0.3452822964729506
+        },
+        {
+          "seed": 7,
+          "r2": 0.7592184747005484,
+          "mae": 0.25886285629178113,
+          "rmse": 0.34670462412946595
+        },
+        {
+          "seed": 8,
+          "r2": 0.7393945626260527,
+          "mae": 0.26009986236683413,
+          "rmse": 0.3634096737131568
+        },
+        {
+          "seed": 9,
+          "r2": 0.7555477987939146,
+          "mae": 0.25693491706329824,
+          "rmse": 0.3531709903969679
+        }
+      ]
+    },
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "SVR",
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.8714912189898992,
+        "r2_std": 0.008787876140810846,
+        "mae_mean": 0.17889814442265645,
+        "mae_std": 0.005145256461313038,
+        "rmse_mean": 0.25205249651255784,
+        "rmse_std": 0.009992524422253264
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.865737319096638,
+          "mae": 0.17841957798470354,
+          "rmse": 0.2530360393353275
+        },
+        {
+          "seed": 1,
+          "r2": 0.8742459643903736,
+          "mae": 0.1761564922635921,
+          "rmse": 0.23915235796039538
+        },
+        {
+          "seed": 2,
+          "r2": 0.8617753112628339,
+          "mae": 0.18532202983928622,
+          "rmse": 0.26691059494376485
+        },
+        {
+          "seed": 3,
+          "r2": 0.8845948488878659,
+          "mae": 0.17349153381323457,
+          "rmse": 0.23893050559459078
+        },
+        {
+          "seed": 4,
+          "r2": 0.8815525475438802,
+          "mae": 0.17573757277087354,
+          "rmse": 0.24449533644877516
+        },
+        {
+          "seed": 5,
+          "r2": 0.8609586535823092,
+          "mae": 0.1778273782734049,
+          "rmse": 0.26169037818426044
+        },
+        {
+          "seed": 6,
+          "r2": 0.8688424371553057,
+          "mae": 0.17589439449130673,
+          "rmse": 0.2548073025992055
+        },
+        {
+          "seed": 7,
+          "r2": 0.8689132236489379,
+          "mae": 0.1814677629713964,
+          "rmse": 0.2558158770396512
+        },
+        {
+          "seed": 8,
+          "r2": 0.8827575174025776,
+          "mae": 0.17492725816472732,
+          "rmse": 0.24375147385724386
+        },
+        {
+          "seed": 9,
+          "r2": 0.8655343669282708,
+          "mae": 0.18973744365403916,
+          "rmse": 0.26193509916236374
+        }
+      ]
+    }
+  ],
+  "oos_split_definition": {
+    "oos_imine": [
+      "O=C(/N=C/c1ccc(Cl)cc1Cl)c1ccccc1"
+    ],
+    "oos_thiol": [
+      "Cc1ccccc1S"
+    ],
+    "n_oos_catalysts": 19,
+    "oos_catalysts": [
+      "O=P1(O)Oc2c(-c3c(C4CCCCC4)cc(C4CCCCC4)cc3C3CCCCC3)cc3ccccc3c2-c2c(c(-c3c(C4CCCCC4)cc(C4CCCCC4)cc3C3CCCCC3)cc3ccccc23)O1",
+      "CC(C)c1cc(C(C)C)c(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4c(C(C)C)cc(C(C)C)cc4C(C)C)cc4ccccc4c2-3)c(C(C)C)c1",
+      "COc1cccc(OC)c1-c1cc2ccccc2c2c1OP(=O)(O)Oc1c(-c3c(OC)cccc3OC)cc3ccccc3c1-2",
+      "Cc1cc(C)c(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4c(C)cc(C)cc4C)cc4ccccc4c2-3)c(C)c1",
+      "O=P1(O)Oc2c(-c3c4ccccc4cc4ccccc34)cc3ccccc3c2-c2c(c(-c3c4ccccc4cc4ccccc34)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(-c3ccc4ccc5cccc6ccc3c4c56)cc3ccccc3c2-c2c(c(-c3ccc4ccc5cccc6ccc3c4c56)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(-c3ccccc3OC(F)(F)F)cc3ccccc3c2-c2c(c(-c3ccccc3OC(F)(F)F)cc3ccccc23)O1",
+      "CC(C)(C)c1cc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4cc(C(C)(C)C)cc(C(C)(C)C)c4)cc4ccccc4c2-3)cc(C(C)(C)C)c1",
+      "CC(C)(C)c1cc(-c2cc3c(c4c2OP(=O)(O)Oc2c(-c5cc(C(C)(C)C)cc(C(C)(C)C)c5)cc5c(c2-4)CCCC5)CCCC3)cc(C(C)(C)C)c1",
+      "Cc1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(C)cc4)cc4ccccc4c2-3)cc1",
+      "CC(C)(C)c1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(C(C)(C)C)cc4)cc4ccccc4c2-3)cc1",
+      "O=P1(O)Oc2c(-c3ccc(-c4ccc5ccccc5c4)cc3)cc3ccccc3c2-c2c(c(-c3ccc(-c4ccc5ccccc5c4)cc3)cc3ccccc23)O1",
+      "COc1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(OC)cc4)cc4ccccc4c2-3)cc1",
+      "COCc1cccc(-c2cc3c(c4c2OP(=O)(O)Oc2c(-c5cccc(COC)c5)cc5c(c2-4)CCCC5)CCCC3)c1",
+      "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "C[Si](c1ccccc1)(c1ccccc1)c1cc2ccccc2c2c1OP(=O)(O)Oc1c([Si](C)(c3ccccc3)c3ccccc3)cc3ccccc3c1-2",
+      "O=P1(O)Oc2c(Br)cc3c(c2-c2c4c(cc(Br)c2O1)CCCC4)CCCC3",
+      "O=P1(O)Oc2c([Si](c3ccccc3)(c3ccccc3)c3ccccc3)cc3ccccc3c2-c2c(c([Si](c3ccccc3)(c3ccccc3)c3ccccc3)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(Cc3ccc(C(F)(F)F)cc3C(F)(F)F)cc3ccccc3c2-c2c(c(Cc3ccc(C(F)(F)F)cc3C(F)(F)F)cc3ccccc23)O1"
+    ]
+  },
+  "split_idx_sizes": {
+    "train": 384,
+    "substrate_oos": 216,
+    "catalyst_oos": 304,
+    "substrate_catalyst_oos": 171
+  },
+  "oos_results": [
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "ExtraTrees",
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8756803130759898,
+          "mae": 0.1716394686172219,
+          "rmse": 0.24380870718363556
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.4990325369072296,
+          "mae": 0.3253827164978283,
+          "rmse": 0.49626934900173936
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.4279824624996189,
+          "mae": 0.3649257301276254,
+          "rmse": 0.5553217670634965
+        }
+      ]
+    },
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "Ridge",
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8639573539262387,
+          "mae": 0.18970072668443946,
+          "rmse": 0.25504498772146855
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.5833585306082758,
+          "mae": 0.2941043334422535,
+          "rmse": 0.4525785219778058
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.4500687958315046,
+          "mae": 0.35462880188245655,
+          "rmse": 0.5444953891666973
+        }
+      ]
+    },
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "KernelRidge",
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.6407067791860543,
+          "mae": 0.31308512687151796,
+          "rmse": 0.4144801812490086
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.4479339067277964,
+          "mae": 0.37727893308725946,
+          "rmse": 0.5209646195933688
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.32300864098370863,
+          "mae": 0.4194458856465111,
+          "rmse": 0.604131648563827
+        }
+      ]
+    },
+    {
+      "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+      "model_type": "SVR",
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8816206143962184,
+          "mae": 0.16726173712315873,
+          "rmse": 0.23791252077017944
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.506411811273766,
+          "mae": 0.3363353074955093,
+          "rmse": 0.4926007537751439
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.39334863552967614,
+          "mae": 0.3802863171300422,
+          "rmse": 0.5718861966212079
+        }
+      ]
+    }
+  ],
+  "strategy_name": "thiol_addition_morgan_imine_thiol_catalyst",
+  "reaction_feature_dim": 6144
+}

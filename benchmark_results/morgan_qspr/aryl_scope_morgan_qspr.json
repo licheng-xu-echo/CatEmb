@@ -1,0 +1,968 @@
+{
+  "task": "Aryl scope yield prediction",
+  "model_name": "MorganFingerprint",
+  "radius": 2,
+  "n_bits": 2048,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "searched_model_types": [
+    "ExtraTrees",
+    "Ridge",
+    "KernelRidge",
+    "SVR"
+  ],
+  "n_estimators": 500,
+  "random_results": [
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "ExtraTrees",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.5492253881878053,
+        "r2_std": 0.058606500930424375,
+        "mae_mean": 11.397952655844161,
+        "mae_std": 0.9493233420937518,
+        "rmse_mean": 19.630543794007966,
+        "rmse_std": 1.1397287531510556
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.47861954087720315,
+          "mae": 11.682004870129866,
+          "rmse": 20.062293004500376
+        },
+        {
+          "seed": 1,
+          "r2": 0.5105598522201166,
+          "mae": 12.078166688311692,
+          "rmse": 20.42045529396694
+        },
+        {
+          "seed": 2,
+          "r2": 0.5830542419475948,
+          "mae": 10.918781883116914,
+          "rmse": 19.37449412461027
+        },
+        {
+          "seed": 3,
+          "r2": 0.549647075630507,
+          "mae": 11.879059285714282,
+          "rmse": 19.926890304384678
+        },
+        {
+          "seed": 4,
+          "r2": 0.6817968442584231,
+          "mae": 9.674744285714294,
+          "rmse": 16.763248491282592
+        },
+        {
+          "seed": 5,
+          "r2": 0.5423933793408238,
+          "mae": 11.19413714285717,
+          "rmse": 19.442956662273673
+        },
+        {
+          "seed": 6,
+          "r2": 0.5517605577227661,
+          "mae": 12.458227857142845,
+          "rmse": 19.956214651966505
+        },
+        {
+          "seed": 7,
+          "r2": 0.5128388669122608,
+          "mae": 12.495080779220773,
+          "rmse": 20.758432656506113
+        },
+        {
+          "seed": 8,
+          "r2": 0.49500315151824226,
+          "mae": 11.524825000000012,
+          "rmse": 20.51950865479789
+        },
+        {
+          "seed": 9,
+          "r2": 0.5865803714501159,
+          "mae": 10.074498766233777,
+          "rmse": 19.080944095790613
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "Ridge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.5613199423466695,
+        "r2_std": 0.03752691224895209,
+        "mae_mean": 15.470768215873026,
+        "mae_std": 0.3900245444762249,
+        "rmse_mean": 19.392250798882998,
+        "rmse_std": 0.5445790734360929
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5070233344226868,
+          "mae": 15.272498562428858,
+          "rmse": 19.508162982810187
+        },
+        {
+          "seed": 1,
+          "r2": 0.5697255613096605,
+          "mae": 15.54195205155905,
+          "rmse": 19.146456035881517
+        },
+        {
+          "seed": 2,
+          "r2": 0.5578604507480492,
+          "mae": 15.92448969791462,
+          "rmse": 19.951257503516697
+        },
+        {
+          "seed": 3,
+          "r2": 0.5961483688542493,
+          "mae": 15.148583711648918,
+          "rmse": 18.870089374898527
+        },
+        {
+          "seed": 4,
+          "r2": 0.6022217897163845,
+          "mae": 14.988993690416411,
+          "rmse": 18.742453255415917
+        },
+        {
+          "seed": 5,
+          "r2": 0.497135749118764,
+          "mae": 15.945435238008375,
+          "rmse": 20.381753257113647
+        },
+        {
+          "seed": 6,
+          "r2": 0.6020138597308657,
+          "mae": 15.044002358325118,
+          "rmse": 18.804297183679857
+        },
+        {
+          "seed": 7,
+          "r2": 0.5850585661619007,
+          "mae": 15.212200160336186,
+          "rmse": 19.15806512160052
+        },
+        {
+          "seed": 8,
+          "r2": 0.5423472082731244,
+          "mae": 15.625078121284385,
+          "rmse": 19.533977417800457
+        },
+        {
+          "seed": 9,
+          "r2": 0.5536645351310103,
+          "mae": 16.00444856680833,
+          "rmse": 19.82599585611265
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "KernelRidge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.5494912651526753,
+        "r2_std": 0.02997536899779133,
+        "mae_mean": 15.720478511398715,
+        "mae_std": 0.3880014613042598,
+        "rmse_mean": 19.662029264280328,
+        "rmse_std": 0.4612904283257474
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5075410814896941,
+          "mae": 15.295349651719388,
+          "rmse": 19.49791610074059
+        },
+        {
+          "seed": 1,
+          "r2": 0.550125670179807,
+          "mae": 15.805520346966464,
+          "rmse": 19.57768028015517
+        },
+        {
+          "seed": 2,
+          "r2": 0.534358952388819,
+          "mae": 16.412566539339583,
+          "rmse": 20.47463746678698
+        },
+        {
+          "seed": 3,
+          "r2": 0.5827465890809032,
+          "mae": 15.352471746864301,
+          "rmse": 19.18063514591261
+        },
+        {
+          "seed": 4,
+          "r2": 0.5912113150455325,
+          "mae": 15.437421966102884,
+          "rmse": 19.00007760401846
+        },
+        {
+          "seed": 5,
+          "r2": 0.5028418940640211,
+          "mae": 15.914170999678483,
+          "rmse": 20.265784534676698
+        },
+        {
+          "seed": 6,
+          "r2": 0.5763867733855842,
+          "mae": 15.421214835731488,
+          "rmse": 19.400275082345047
+        },
+        {
+          "seed": 7,
+          "r2": 0.5646872321289969,
+          "mae": 15.469395467452408,
+          "rmse": 19.622708221150347
+        },
+        {
+          "seed": 8,
+          "r2": 0.5391156399248267,
+          "mae": 15.864892771676768,
+          "rmse": 19.60282255659595
+        },
+        {
+          "seed": 9,
+          "r2": 0.5458975038385694,
+          "mae": 16.231780788455396,
+          "rmse": 19.997755650421446
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "SVR",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_summary": {
+        "r2_mean": 0.6426041210019824,
+        "r2_std": 0.021596660251317103,
+        "mae_mean": 12.769625177835746,
+        "mae_std": 0.38062694746109205,
+        "rmse_mean": 17.51635572081646,
+        "rmse_std": 0.45560730194577215
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.614338200938838,
+          "mae": 12.446354593144894,
+          "rmse": 17.254663941354018
+        },
+        {
+          "seed": 1,
+          "r2": 0.6226345348319695,
+          "mae": 13.158257980008658,
+          "rmse": 17.93067760414215
+        },
+        {
+          "seed": 2,
+          "r2": 0.6406342422238243,
+          "mae": 13.267763221365957,
+          "rmse": 17.98700843512904
+        },
+        {
+          "seed": 3,
+          "r2": 0.6628186465355255,
+          "mae": 12.556485855632445,
+          "rmse": 17.242284680198615
+        },
+        {
+          "seed": 4,
+          "r2": 0.6745174520253392,
+          "mae": 12.402703509041881,
+          "rmse": 16.95390694926189
+        },
+        {
+          "seed": 5,
+          "r2": 0.6271815063761191,
+          "mae": 12.580412119471637,
+          "rmse": 17.54950544120618
+        },
+        {
+          "seed": 6,
+          "r2": 0.6740832823320964,
+          "mae": 12.313411870262215,
+          "rmse": 17.016743437259628
+        },
+        {
+          "seed": 7,
+          "r2": 0.6301818708780182,
+          "mae": 13.132775489372989,
+          "rmse": 18.086408771120436
+        },
+        {
+          "seed": 8,
+          "r2": 0.6490583167853463,
+          "mae": 12.603061674854153,
+          "rmse": 17.105670444689313
+        },
+        {
+          "seed": 9,
+          "r2": 0.6305931570927478,
+          "mae": 13.235025465202616,
+          "rmse": 18.03668750380334
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "ExtraTrees",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_summary": {
+        "r2_mean": 0.5715205374380047,
+        "r2_std": 0.05648465369944617,
+        "mae_mean": 11.127596922077922,
+        "mae_std": 0.883707182173197,
+        "rmse_mean": 19.145070701413925,
+        "rmse_std": 1.1824827863504035
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5128454270251817,
+          "mae": 11.212277532467523,
+          "rmse": 19.392624381782323
+        },
+        {
+          "seed": 1,
+          "r2": 0.5446614406216398,
+          "mae": 11.617022597402595,
+          "rmse": 19.696217893119442
+        },
+        {
+          "seed": 2,
+          "r2": 0.6089008661078709,
+          "mae": 10.548525389610417,
+          "rmse": 18.764371342860873
+        },
+        {
+          "seed": 3,
+          "r2": 0.49559197645991215,
+          "mae": 12.426360259740248,
+          "rmse": 21.08890495809294
+        },
+        {
+          "seed": 4,
+          "r2": 0.6702956090473045,
+          "mae": 9.71821292207793,
+          "rmse": 17.06350748044702
+        },
+        {
+          "seed": 5,
+          "r2": 0.618695311094799,
+          "mae": 10.578876233766234,
+          "rmse": 17.748114892240434
+        },
+        {
+          "seed": 6,
+          "r2": 0.6168341137139155,
+          "mae": 11.400405844155824,
+          "rmse": 18.450857311152763
+        },
+        {
+          "seed": 7,
+          "r2": 0.545985304843349,
+          "mae": 12.312800129870128,
+          "rmse": 20.0397914905139
+        },
+        {
+          "seed": 8,
+          "r2": 0.5204197552510739,
+          "mae": 11.31300435064935,
+          "rmse": 19.99646677321077
+        },
+        {
+          "seed": 9,
+          "r2": 0.5809755702150008,
+          "mae": 10.148483961038968,
+          "rmse": 19.209850490718807
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "Ridge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_summary": {
+        "r2_mean": 0.5613139566661247,
+        "r2_std": 0.03755924547920834,
+        "mae_mean": 15.47153942937975,
+        "mae_std": 0.38947364354485814,
+        "rmse_mean": 19.392340182865812,
+        "rmse_std": 0.5447689504532833
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.506937820791543,
+          "mae": 15.274285333187548,
+          "rmse": 19.509854889986187
+        },
+        {
+          "seed": 1,
+          "r2": 0.5696904727362413,
+          "mae": 15.5444027468446,
+          "rmse": 19.147236709879124
+        },
+        {
+          "seed": 2,
+          "r2": 0.5579693384178729,
+          "mae": 15.922847504801565,
+          "rmse": 19.948800609856953
+        },
+        {
+          "seed": 3,
+          "r2": 0.5961710355684456,
+          "mae": 15.148998779817061,
+          "rmse": 18.869559812936245
+        },
+        {
+          "seed": 4,
+          "r2": 0.6021592349411172,
+          "mae": 14.991741978533858,
+          "rmse": 18.74392692067768
+        },
+        {
+          "seed": 5,
+          "r2": 0.4969886623791593,
+          "mae": 15.947993617986706,
+          "rmse": 20.38473384923369
+        },
+        {
+          "seed": 6,
+          "r2": 0.6021278651114681,
+          "mae": 15.042213135261042,
+          "rmse": 18.801603692138674
+        },
+        {
+          "seed": 7,
+          "r2": 0.5849273858790089,
+          "mae": 15.215801197398793,
+          "rmse": 19.16109321376014
+        },
+        {
+          "seed": 8,
+          "r2": 0.542443831541719,
+          "mae": 15.62330361205262,
+          "rmse": 19.531915225223425
+        },
+        {
+          "seed": 9,
+          "r2": 0.5537239192946715,
+          "mae": 16.00380638791369,
+          "rmse": 19.82467690496599
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "KernelRidge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_summary": {
+        "r2_mean": 0.5433009063934499,
+        "r2_std": 0.028781567502109164,
+        "mae_mean": 15.907087699434243,
+        "mae_std": 0.39711120526014554,
+        "rmse_mean": 19.79860402342184,
+        "rmse_std": 0.4570295438700347
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5059038914919733,
+          "mae": 15.4232632203899,
+          "rmse": 19.530299823382496
+        },
+        {
+          "seed": 1,
+          "r2": 0.544006907167135,
+          "mae": 15.985814201004862,
+          "rmse": 19.71036912598593
+        },
+        {
+          "seed": 2,
+          "r2": 0.5284980308828493,
+          "mae": 16.619310267776843,
+          "rmse": 20.603089412098306
+        },
+        {
+          "seed": 3,
+          "r2": 0.5776662930932872,
+          "mae": 15.494452215008844,
+          "rmse": 19.29704939977497
+        },
+        {
+          "seed": 4,
+          "r2": 0.5781586574627878,
+          "mae": 15.68397862172738,
+          "rmse": 19.30103116195381
+        },
+        {
+          "seed": 5,
+          "r2": 0.4935817442552186,
+          "mae": 16.203936423015673,
+          "rmse": 20.453650705661303
+        },
+        {
+          "seed": 6,
+          "r2": 0.5706702555754148,
+          "mae": 15.615939167389257,
+          "rmse": 19.530736512888268
+        },
+        {
+          "seed": 7,
+          "r2": 0.5567510299313267,
+          "mae": 15.686786354540253,
+          "rmse": 19.800771455219905
+        },
+        {
+          "seed": 8,
+          "r2": 0.5385382627211288,
+          "mae": 15.97532521164402,
+          "rmse": 19.615097523288934
+        },
+        {
+          "seed": 9,
+          "r2": 0.5392339913533777,
+          "mae": 16.382071311845383,
+          "rmse": 20.143945113964534
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "SVR",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_summary": {
+        "r2_mean": 0.5758509812698929,
+        "r2_std": 0.02087856659451047,
+        "mae_mean": 14.346426158760213,
+        "mae_std": 0.41968589392394096,
+        "rmse_mean": 19.08826563461811,
+        "rmse_std": 0.5220422350398388
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5599821932586064,
+          "mae": 13.801721289552969,
+          "rmse": 18.4305510294535
+        },
+        {
+          "seed": 1,
+          "r2": 0.5605990317786587,
+          "mae": 14.50471214862301,
+          "rmse": 19.348447806090196
+        },
+        {
+          "seed": 2,
+          "r2": 0.5765976675684727,
+          "mae": 14.887659785329445,
+          "rmse": 19.523928787568796
+        },
+        {
+          "seed": 3,
+          "r2": 0.5967924143391632,
+          "mae": 14.234551286280388,
+          "rmse": 18.855036761336788
+        },
+        {
+          "seed": 4,
+          "r2": 0.5830109365923943,
+          "mae": 14.492476496173202,
+          "rmse": 19.18970391892981
+        },
+        {
+          "seed": 5,
+          "r2": 0.5492415223257403,
+          "mae": 14.37576114815911,
+          "rmse": 19.296925061399946
+        },
+        {
+          "seed": 6,
+          "r2": 0.6101451925248136,
+          "mae": 13.80357427238633,
+          "rmse": 18.611208697093158
+        },
+        {
+          "seed": 7,
+          "r2": 0.5601122339435882,
+          "mae": 14.625812997972808,
+          "rmse": 19.725552909927345
+        },
+        {
+          "seed": 8,
+          "r2": 0.6005494073457096,
+          "mae": 13.838871874736764,
+          "rmse": 18.249633968493182
+        },
+        {
+          "seed": 9,
+          "r2": 0.5614792130217816,
+          "mae": 14.899120288388097,
+          "rmse": 19.651667405888386
+        }
+      ]
+    }
+  ],
+  "oos_split_definition": {
+    "oos_electrophile_ids": [
+      "e5"
+    ],
+    "oos_nucleophile_ids": [
+      "nG"
+    ],
+    "oos_ligand_names": [
+      "P(fur)3",
+      "P(o-Anis)3",
+      "PCy3 HBF4",
+      "PPh2Me",
+      "PPh3",
+      "PPhMe2",
+      "PPhtBu2",
+      "Ph-PhenCar-Phos",
+      "PnBu3 HBF4",
+      "X-Phos",
+      "tBPh-CPhos"
+    ]
+  },
+  "split_idx_sizes": {
+    "train": 637,
+    "substrate_oos": 195,
+    "catalyst_oos": 539,
+    "substrate_catalyst_oos": 165
+  },
+  "oos_results": [
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "ExtraTrees",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.49007698139276934,
+          "mae": 12.43249579487181,
+          "rmse": 19.998983250741354
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.26115091249545874,
+          "mae": 15.358296623376612,
+          "rmse": 24.957243218852575
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": 0.014363770932008468,
+          "mae": 18.718413939393912,
+          "rmse": 27.05243202303716
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "Ridge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.46709895260108625,
+          "mae": 16.438573048909507,
+          "rmse": 20.44461304439034
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.3718230523322642,
+          "mae": 18.421196605137418,
+          "rmse": 23.01228469621687
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.061098664258323554,
+          "mae": 22.68189835057114,
+          "rmse": 28.0689307522938
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "KernelRidge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.4530160887342123,
+          "mae": 17.550091829854352,
+          "rmse": 20.712994237081045
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.36609095931418534,
+          "mae": 19.08170615929394,
+          "rmse": 23.117039420827037
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.02524368977353597,
+          "mae": 23.78759777499077,
+          "rmse": 27.590624946062626
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand",
+      "model_type": "SVR",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "reaction_feature_dim": 6144,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.5120815781752133,
+          "mae": 15.846861314013308,
+          "rmse": 19.562718964935062
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.508253323304356,
+          "mae": 15.157782754618589,
+          "rmse": 20.360547755644102
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": 0.027991644387213355,
+          "mae": 22.011784412799866,
+          "rmse": 26.864761187884653
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "ExtraTrees",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.4944155984134526,
+          "mae": 12.400603897435902,
+          "rmse": 19.913722065351134
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.25099476523271813,
+          "mae": 15.617203005565848,
+          "rmse": 25.128187688999997
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": 0.04977612561861822,
+          "mae": 18.338049333333316,
+          "rmse": 26.562011116054663
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "Ridge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.46736903691381193,
+          "mae": 16.432406326685197,
+          "rmse": 20.43943152982814
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.37450464099611436,
+          "mae": 18.395479043737637,
+          "rmse": 22.963114251517624
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.046137177526625495,
+          "mae": 22.548397096113725,
+          "rmse": 27.870342340059707
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "KernelRidge",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.45207292995894977,
+          "mae": 17.650707742988203,
+          "rmse": 20.730844148065515
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.35034793506632445,
+          "mae": 19.47059838638089,
+          "rmse": 23.40233287022291
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.015061277513428895,
+          "mae": 23.877087079152883,
+          "rmse": 27.453272160167174
+        }
+      ]
+    },
+    {
+      "strategy_name": "aryl_scope_morgan_electrophile_nucleophile_ligand_pd_catalyst",
+      "model_type": "SVR",
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles",
+        "pd_catalyst_smiles"
+      ],
+      "reaction_feature_dim": 8192,
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.5080480862011849,
+          "mae": 15.829394231994895,
+          "rmse": 19.64341244064239
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.4819748450434791,
+          "mae": 16.201050508618284,
+          "rmse": 20.897491893235326
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": 0.09207483847520737,
+          "mae": 21.84770750092282,
+          "rmse": 25.96408433774823
+        }
+      ]
+    }
+  ]
+}

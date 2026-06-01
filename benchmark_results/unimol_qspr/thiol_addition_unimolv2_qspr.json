@@ -1,0 +1,2854 @@
+{
+  "task": "Thiol addition / acetal dataset",
+  "dataset_file": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/dataset/rxn_data/NS_acetal_dataset_with_pdt.csv",
+  "model_name": "unimolv2",
+  "searched_model_sizes": [
+    "84m",
+    "164m",
+    "310m",
+    "570m",
+    "1.1B"
+  ],
+  "searched_model_types": [
+    "ExtraTrees",
+    "Ridge",
+    "KernelRidge",
+    "SVR"
+  ],
+  "batch_size": 128,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "n_estimators": 500,
+  "random_seed": 42,
+  "use_cache": true,
+  "random_results": [
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.8932066117632574,
+        "r2_std": 0.006199262721466852,
+        "mae_mean": 0.1500542636324577,
+        "mae_std": 0.005527324375047726,
+        "rmse_mean": 0.22983168553939454,
+        "rmse_std": 0.008717305177558173
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8881313875310964,
+          "mae": 0.15021683787494333,
+          "rmse": 0.23097174181912417
+        },
+        {
+          "seed": 1,
+          "r2": 0.8990344767232247,
+          "mae": 0.1432112468853388,
+          "rmse": 0.21428918442226216
+        },
+        {
+          "seed": 2,
+          "r2": 0.8838217028169105,
+          "mae": 0.15457628563280418,
+          "rmse": 0.24470086603600266
+        },
+        {
+          "seed": 3,
+          "r2": 0.8852581048243144,
+          "mae": 0.1543379095351154,
+          "rmse": 0.23824292612412426
+        },
+        {
+          "seed": 4,
+          "r2": 0.8992889496264697,
+          "mae": 0.14810234723217736,
+          "rmse": 0.22544794461843246
+        },
+        {
+          "seed": 5,
+          "r2": 0.8960200207067306,
+          "mae": 0.15038369569362944,
+          "rmse": 0.22630316912063964
+        },
+        {
+          "seed": 6,
+          "r2": 0.892964081463692,
+          "mae": 0.14777716243804637,
+          "rmse": 0.23018656469667426
+        },
+        {
+          "seed": 7,
+          "r2": 0.9009891845813692,
+          "mae": 0.14464394039742712,
+          "rmse": 0.22232554828138024
+        },
+        {
+          "seed": 8,
+          "r2": 0.8971100745496167,
+          "mae": 0.14573695643445073,
+          "rmse": 0.22834482502112383
+        },
+        {
+          "seed": 9,
+          "r2": 0.8894481348091507,
+          "mae": 0.16155625420064423,
+          "rmse": 0.23750408525418132
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.8653579067027927,
+        "r2_std": 0.009156161981111842,
+        "mae_mean": 0.1852906601127817,
+        "mae_std": 0.0045949913469487584,
+        "rmse_mean": 0.2579044053359714,
+        "rmse_std": 0.007034992623258101
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8502154583092775,
+          "mae": 0.18968976892087164,
+          "rmse": 0.26726261980958765
+        },
+        {
+          "seed": 1,
+          "r2": 0.8579601474797751,
+          "mae": 0.18327135993419638,
+          "rmse": 0.2541667923555791
+        },
+        {
+          "seed": 2,
+          "r2": 0.8657365803830538,
+          "mae": 0.18275024883104624,
+          "rmse": 0.26305820668723034
+        },
+        {
+          "seed": 3,
+          "r2": 0.8642655914462489,
+          "mae": 0.17899330451168596,
+          "rmse": 0.25912181830773207
+        },
+        {
+          "seed": 4,
+          "r2": 0.8670346708213998,
+          "mae": 0.1872971008239426,
+          "rmse": 0.25904601993695797
+        },
+        {
+          "seed": 5,
+          "r2": 0.8696492907901012,
+          "mae": 0.18646871279262442,
+          "rmse": 0.25338008161808995
+        },
+        {
+          "seed": 6,
+          "r2": 0.8569176626924185,
+          "mae": 0.19390085468116422,
+          "rmse": 0.2661388122538093
+        },
+        {
+          "seed": 7,
+          "r2": 0.8700276130746222,
+          "mae": 0.18563117005197438,
+          "rmse": 0.2547261905750611
+        },
+        {
+          "seed": 8,
+          "r2": 0.8677249413940464,
+          "mae": 0.18596664309704178,
+          "rmse": 0.2589069619508856
+        },
+        {
+          "seed": 9,
+          "r2": 0.884047110636984,
+          "mae": 0.17893743748326954,
+          "rmse": 0.24323654986478094
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.6077934518766337,
+        "r2_std": 0.022556789069267055,
+        "mae_mean": 0.32485417320198684,
+        "mae_std": 0.013581933564591841,
+        "rmse_mean": 0.4404699894410354,
+        "rmse_std": 0.016864940511634088
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.6250796000441678,
+          "mae": 0.3080133215992743,
+          "rmse": 0.42283824302762746
+        },
+        {
+          "seed": 1,
+          "r2": 0.6414259323551494,
+          "mae": 0.3000965654759482,
+          "rmse": 0.4038342416987866
+        },
+        {
+          "seed": 2,
+          "r2": 0.6152185502691385,
+          "mae": 0.3261027941247142,
+          "rmse": 0.4453280656728348
+        },
+        {
+          "seed": 3,
+          "r2": 0.5617514062279185,
+          "mae": 0.3468272148078405,
+          "rmse": 0.4656067531779981
+        },
+        {
+          "seed": 4,
+          "r2": 0.6066524359604587,
+          "mae": 0.3275880159756093,
+          "rmse": 0.44554948907716596
+        },
+        {
+          "seed": 5,
+          "r2": 0.5861206939951443,
+          "mae": 0.33123637642499465,
+          "rmse": 0.4514946708920026
+        },
+        {
+          "seed": 6,
+          "r2": 0.5966357235824472,
+          "mae": 0.3348551334564352,
+          "rmse": 0.4468522177836113
+        },
+        {
+          "seed": 7,
+          "r2": 0.6069987356814218,
+          "mae": 0.3293122796449889,
+          "rmse": 0.4429401283579277
+        },
+        {
+          "seed": 8,
+          "r2": 0.6269584798622038,
+          "mae": 0.31526639371322,
+          "rmse": 0.4347937908700694
+        },
+        {
+          "seed": 9,
+          "r2": 0.6110929607882878,
+          "mae": 0.3292436367968429,
+          "rmse": 0.44546229385232994
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.8175518854596477,
+        "r2_std": 0.017964974723495883,
+        "mae_mean": 0.22496867621684352,
+        "mae_std": 0.011686001544731171,
+        "rmse_mean": 0.3001992148750505,
+        "rmse_std": 0.016586871260667328
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.833944287256757,
+          "mae": 0.2140662320070014,
+          "rmse": 0.28140488632996885
+        },
+        {
+          "seed": 1,
+          "r2": 0.8227639986787916,
+          "mae": 0.21652906050934342,
+          "rmse": 0.2839158728926378
+        },
+        {
+          "seed": 2,
+          "r2": 0.8107851374300787,
+          "mae": 0.2308853468526811,
+          "rmse": 0.31228464197167455
+        },
+        {
+          "seed": 3,
+          "r2": 0.7808167755512907,
+          "mae": 0.2429748900824475,
+          "rmse": 0.3292779588182397
+        },
+        {
+          "seed": 4,
+          "r2": 0.8142874749505886,
+          "mae": 0.22944016903131018,
+          "rmse": 0.30614580650357354
+        },
+        {
+          "seed": 5,
+          "r2": 0.8321246661143296,
+          "mae": 0.21017353506916484,
+          "rmse": 0.28754724914044577
+        },
+        {
+          "seed": 6,
+          "r2": 0.8117079694135484,
+          "mae": 0.23356731114484316,
+          "rmse": 0.3053030696366605
+        },
+        {
+          "seed": 7,
+          "r2": 0.8138592911034424,
+          "mae": 0.23210461556851353,
+          "rmse": 0.30483774138111597
+        },
+        {
+          "seed": 8,
+          "r2": 0.8468526396175031,
+          "mae": 0.2084385819761088,
+          "rmse": 0.27858613955991507
+        },
+        {
+          "seed": 9,
+          "r2": 0.8083766144801463,
+          "mae": 0.23150701992702108,
+          "rmse": 0.3126887825162735
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.8947418794388561,
+        "r2_std": 0.005848564122900455,
+        "mae_mean": 0.14799113956074222,
+        "mae_std": 0.005046192608873112,
+        "rmse_mean": 0.22816362119179465,
+        "rmse_std": 0.007877687424692588
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.892232985720535,
+          "mae": 0.1476174140326316,
+          "rmse": 0.22669797936674482
+        },
+        {
+          "seed": 1,
+          "r2": 0.8970374155387061,
+          "mae": 0.14324304118165457,
+          "rmse": 0.21639808806152708
+        },
+        {
+          "seed": 2,
+          "r2": 0.8863595837010595,
+          "mae": 0.15000047645810924,
+          "rmse": 0.2420133988786741
+        },
+        {
+          "seed": 3,
+          "r2": 0.8838781804211512,
+          "mae": 0.15489990029741862,
+          "rmse": 0.23967123916696048
+        },
+        {
+          "seed": 4,
+          "r2": 0.899569570520353,
+          "mae": 0.1452874024679753,
+          "rmse": 0.22513363186111596
+        },
+        {
+          "seed": 5,
+          "r2": 0.8962893862399297,
+          "mae": 0.14983943562971772,
+          "rmse": 0.22600985398275686
+        },
+        {
+          "seed": 6,
+          "r2": 0.8963074414672355,
+          "mae": 0.14563495809770932,
+          "rmse": 0.22656300518442013
+        },
+        {
+          "seed": 7,
+          "r2": 0.9018476501784214,
+          "mae": 0.1419015546064923,
+          "rmse": 0.22135962176263613
+        },
+        {
+          "seed": 8,
+          "r2": 0.9000806704109151,
+          "mae": 0.1441781344730992,
+          "rmse": 0.22502434337525104
+        },
+        {
+          "seed": 9,
+          "r2": 0.8938159101902547,
+          "mae": 0.15730907836261465,
+          "rmse": 0.23276505027785974
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.865302399361153,
+        "r2_std": 0.009150590432681656,
+        "mae_mean": 0.18533257926415736,
+        "mae_std": 0.004489617439690408,
+        "rmse_mean": 0.2579579738997083,
+        "rmse_std": 0.007009015005075366
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8498843214885354,
+          "mae": 0.18971426116839799,
+          "rmse": 0.2675578827052419
+        },
+        {
+          "seed": 1,
+          "r2": 0.8578772304696076,
+          "mae": 0.18333987964621304,
+          "rmse": 0.25424096757959846
+        },
+        {
+          "seed": 2,
+          "r2": 0.8654458974882848,
+          "mae": 0.18293373495905757,
+          "rmse": 0.2633428157717427
+        },
+        {
+          "seed": 3,
+          "r2": 0.8645520171681558,
+          "mae": 0.17902313130963013,
+          "rmse": 0.258848275474334
+        },
+        {
+          "seed": 4,
+          "r2": 0.867108316318678,
+          "mae": 0.18720799816017203,
+          "rmse": 0.2589742711005155
+        },
+        {
+          "seed": 5,
+          "r2": 0.8693383002310568,
+          "mae": 0.18686840751114317,
+          "rmse": 0.25368215849271986
+        },
+        {
+          "seed": 6,
+          "r2": 0.8570586806457037,
+          "mae": 0.19360906320264976,
+          "rmse": 0.26600763043543796
+        },
+        {
+          "seed": 7,
+          "r2": 0.8702625526457288,
+          "mae": 0.1855092030838389,
+          "rmse": 0.25449586345676
+        },
+        {
+          "seed": 8,
+          "r2": 0.8676917052579665,
+          "mae": 0.18594349431267587,
+          "rmse": 0.2589394870793538
+        },
+        {
+          "seed": 9,
+          "r2": 0.8838049718978135,
+          "mae": 0.17917661928779532,
+          "rmse": 0.2434903869013786
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.6501334901110147,
+        "r2_std": 0.01765070803970313,
+        "mae_mean": 0.31320755533466554,
+        "mae_std": 0.0112330105451159,
+        "rmse_mean": 0.41604599444082446,
+        "rmse_std": 0.014849995867431522
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.6718033358502559,
+          "mae": 0.2920723185768837,
+          "rmse": 0.39561413935622963
+        },
+        {
+          "seed": 1,
+          "r2": 0.6720348866134189,
+          "mae": 0.3001542759985543,
+          "rmse": 0.3862135674422939
+        },
+        {
+          "seed": 2,
+          "r2": 0.6583194618103028,
+          "mae": 0.3120270342271624,
+          "rmse": 0.4196460351848142
+        },
+        {
+          "seed": 3,
+          "r2": 0.6200085353158116,
+          "mae": 0.33151351794022477,
+          "rmse": 0.4335567238757814
+        },
+        {
+          "seed": 4,
+          "r2": 0.6539354863595959,
+          "mae": 0.31178254521853754,
+          "rmse": 0.41791335653712025
+        },
+        {
+          "seed": 5,
+          "r2": 0.6307079446201803,
+          "mae": 0.3149320412206662,
+          "rmse": 0.4264820478248316
+        },
+        {
+          "seed": 6,
+          "r2": 0.6458870144648524,
+          "mae": 0.32045465350270314,
+          "rmse": 0.4186837716905738
+        },
+        {
+          "seed": 7,
+          "r2": 0.6418603759558703,
+          "mae": 0.3171876870979289,
+          "rmse": 0.42283822404565025
+        },
+        {
+          "seed": 8,
+          "r2": 0.6671851485034519,
+          "mae": 0.3091440333500861,
+          "rmse": 0.4106824047282985
+        },
+        {
+          "seed": 9,
+          "r2": 0.6395927116164071,
+          "mae": 0.3228074462139087,
+          "rmse": 0.4288296737226508
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.8614825764132655,
+        "r2_std": 0.009395283618260314,
+        "mae_mean": 0.196107410744841,
+        "mae_std": 0.007836633253561848,
+        "rmse_mean": 0.2617109332709683,
+        "rmse_std": 0.011028054483363064
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8791077772519023,
+          "mae": 0.1862245311315532,
+          "rmse": 0.24010649334170805
+        },
+        {
+          "seed": 1,
+          "r2": 0.8614613146692783,
+          "mae": 0.18940766504797987,
+          "rmse": 0.2510147446382709
+        },
+        {
+          "seed": 2,
+          "r2": 0.8604967435204143,
+          "mae": 0.19488895805558937,
+          "rmse": 0.2681422046657331
+        },
+        {
+          "seed": 3,
+          "r2": 0.8520349692697604,
+          "mae": 0.20623146718961607,
+          "rmse": 0.27054440033277377
+        },
+        {
+          "seed": 4,
+          "r2": 0.8601419800977063,
+          "mae": 0.19742903520582777,
+          "rmse": 0.2656754379277252
+        },
+        {
+          "seed": 5,
+          "r2": 0.8543636187989418,
+          "mae": 0.19906029172252873,
+          "rmse": 0.267824752334898
+        },
+        {
+          "seed": 6,
+          "r2": 0.8579791833607615,
+          "mae": 0.20215011401314284,
+          "rmse": 0.2651497391325035
+        },
+        {
+          "seed": 7,
+          "r2": 0.863285499202356,
+          "mae": 0.19480055316536246,
+          "rmse": 0.2612494253900094
+        },
+        {
+          "seed": 8,
+          "r2": 0.8756480770174264,
+          "mae": 0.184113806425367,
+          "rmse": 0.2510331063327764
+        },
+        {
+          "seed": 9,
+          "r2": 0.8503066009441078,
+          "mae": 0.20676768549144287,
+          "rmse": 0.27636902861328433
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.892602241096913,
+        "r2_std": 0.00762946080023017,
+        "mae_mean": 0.1497631670532787,
+        "mae_std": 0.006157512196852653,
+        "rmse_mean": 0.2304383675455171,
+        "rmse_std": 0.009919414838649054
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8939943236472788,
+          "mae": 0.14676470853231155,
+          "rmse": 0.22483777788308723
+        },
+        {
+          "seed": 1,
+          "r2": 0.8945773895396938,
+          "mae": 0.1458215532985431,
+          "rmse": 0.2189679662392199
+        },
+        {
+          "seed": 2,
+          "r2": 0.8800440866290709,
+          "mae": 0.15636461943481259,
+          "rmse": 0.24864734938908545
+        },
+        {
+          "seed": 3,
+          "r2": 0.8808034630869908,
+          "mae": 0.15613910481294266,
+          "rmse": 0.24282356113843756
+        },
+        {
+          "seed": 4,
+          "r2": 0.9002021652384776,
+          "mae": 0.14545180159160084,
+          "rmse": 0.2244234719840129
+        },
+        {
+          "seed": 5,
+          "r2": 0.8940722901958024,
+          "mae": 0.15265793181798729,
+          "rmse": 0.22841286639912026
+        },
+        {
+          "seed": 6,
+          "r2": 0.895176747303762,
+          "mae": 0.14533138175079982,
+          "rmse": 0.22779491085472378
+        },
+        {
+          "seed": 7,
+          "r2": 0.9008321761079473,
+          "mae": 0.14375110255207968,
+          "rmse": 0.222501757148704
+        },
+        {
+          "seed": 8,
+          "r2": 0.8997256595519572,
+          "mae": 0.14452709054697685,
+          "rmse": 0.22542374183609834
+        },
+        {
+          "seed": 9,
+          "r2": 0.8865941096681508,
+          "mae": 0.16082237619473247,
+          "rmse": 0.24055027258268175
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.8651972266506756,
+        "r2_std": 0.00917813055248623,
+        "mae_mean": 0.1854071914302042,
+        "mae_std": 0.004481694057606738,
+        "rmse_mean": 0.25805730817772865,
+        "rmse_std": 0.007022166103999831
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.849841661774455,
+          "mae": 0.1897841505632585,
+          "rmse": 0.26759589716217275
+        },
+        {
+          "seed": 1,
+          "r2": 0.8577067309552704,
+          "mae": 0.1834261350643177,
+          "rmse": 0.2543934236874044
+        },
+        {
+          "seed": 2,
+          "r2": 0.8653041206731489,
+          "mae": 0.18301787728073343,
+          "rmse": 0.26348151862500613
+        },
+        {
+          "seed": 3,
+          "r2": 0.8641963447097468,
+          "mae": 0.17922387775463083,
+          "rmse": 0.25918790712242495
+        },
+        {
+          "seed": 4,
+          "r2": 0.8670312096715431,
+          "mae": 0.18732229371276934,
+          "rmse": 0.2590493914596913
+        },
+        {
+          "seed": 5,
+          "r2": 0.869145691986448,
+          "mae": 0.18706862584763018,
+          "rmse": 0.25386906591086883
+        },
+        {
+          "seed": 6,
+          "r2": 0.8570489089750379,
+          "mae": 0.19357059973027257,
+          "rmse": 0.26601672260888654
+        },
+        {
+          "seed": 7,
+          "r2": 0.8699785486909847,
+          "mae": 0.1857058241304288,
+          "rmse": 0.25477426541835096
+        },
+        {
+          "seed": 8,
+          "r2": 0.8678081442636946,
+          "mae": 0.18589727615116564,
+          "rmse": 0.25882552108431894
+        },
+        {
+          "seed": 9,
+          "r2": 0.8839109048064272,
+          "mae": 0.17905525406683506,
+          "rmse": 0.2433793686981614
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.6468487324379752,
+        "r2_std": 0.02334461597978551,
+        "mae_mean": 0.31191433286148096,
+        "mae_std": 0.011580321884215117,
+        "rmse_mean": 0.4179119015281011,
+        "rmse_std": 0.01738416342300034
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.6587303826031031,
+          "mae": 0.30066949098082113,
+          "rmse": 0.4034163879479903
+        },
+        {
+          "seed": 1,
+          "r2": 0.6821807799944277,
+          "mae": 0.29175658525445924,
+          "rmse": 0.38019270580908293
+        },
+        {
+          "seed": 2,
+          "r2": 0.6628791924223183,
+          "mae": 0.30570967430234464,
+          "rmse": 0.4168365399952188
+        },
+        {
+          "seed": 3,
+          "r2": 0.6143731090077209,
+          "mae": 0.32965865323492183,
+          "rmse": 0.436759802174536
+        },
+        {
+          "seed": 4,
+          "r2": 0.6472297332448782,
+          "mae": 0.3149038381268369,
+          "rmse": 0.42194292021051244
+        },
+        {
+          "seed": 5,
+          "r2": 0.6112686863662733,
+          "mae": 0.3247840300659387,
+          "rmse": 0.4375629437860352
+        },
+        {
+          "seed": 6,
+          "r2": 0.6463949371884534,
+          "mae": 0.31726679877828823,
+          "rmse": 0.41838339395515106
+        },
+        {
+          "seed": 7,
+          "r2": 0.630649773333074,
+          "mae": 0.3169464233880783,
+          "rmse": 0.42940513968526967
+        },
+        {
+          "seed": 8,
+          "r2": 0.6724339985215697,
+          "mae": 0.3027280784496171,
+          "rmse": 0.4074310818050913
+        },
+        {
+          "seed": 9,
+          "r2": 0.6423467316979345,
+          "mae": 0.3147197560335032,
+          "rmse": 0.4271880999121231
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.834806201653923,
+        "r2_std": 0.01946785849035625,
+        "mae_mean": 0.21206890513730686,
+        "mae_std": 0.012922738315589752,
+        "rmse_mean": 0.28555067710665694,
+        "rmse_std": 0.019489159159753522
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8503360848132129,
+          "mae": 0.19836856947201084,
+          "rmse": 0.2671549803679983
+        },
+        {
+          "seed": 1,
+          "r2": 0.8529377072461946,
+          "mae": 0.19498037823246508,
+          "rmse": 0.2586213461709829
+        },
+        {
+          "seed": 2,
+          "r2": 0.8369141091888231,
+          "mae": 0.21326355845766884,
+          "rmse": 0.289922017458295
+        },
+        {
+          "seed": 3,
+          "r2": 0.8333526595759744,
+          "mae": 0.2180046062536306,
+          "rmse": 0.2871165313177646
+        },
+        {
+          "seed": 4,
+          "r2": 0.8074544040310205,
+          "mae": 0.23158195974756873,
+          "rmse": 0.3117270662543932
+        },
+        {
+          "seed": 5,
+          "r2": 0.8351016063966725,
+          "mae": 0.21355590347374004,
+          "rmse": 0.28498630134033465
+        },
+        {
+          "seed": 6,
+          "r2": 0.8225246050662957,
+          "mae": 0.2228956494437376,
+          "rmse": 0.29640414798857917
+        },
+        {
+          "seed": 7,
+          "r2": 0.8145860963957771,
+          "mae": 0.2183019337277286,
+          "rmse": 0.3042420243508795
+        },
+        {
+          "seed": 8,
+          "r2": 0.8720038500687501,
+          "mae": 0.19175605121647346,
+          "rmse": 0.25468490218527473
+        },
+        {
+          "seed": 9,
+          "r2": 0.8228508937565105,
+          "mae": 0.21798044134804442,
+          "rmse": 0.3006474536320675
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.8928792050201413,
+        "r2_std": 0.005021758930941186,
+        "mae_mean": 0.14967240396340215,
+        "mae_std": 0.005156006205787993,
+        "rmse_mean": 0.23018402621520379,
+        "rmse_std": 0.006738701458826611
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.890339654035885,
+          "mae": 0.14930224521920854,
+          "rmse": 0.22868070877729377
+        },
+        {
+          "seed": 1,
+          "r2": 0.8943358995583903,
+          "mae": 0.14399668028141885,
+          "rmse": 0.21921861608767612
+        },
+        {
+          "seed": 2,
+          "r2": 0.8883024501344811,
+          "mae": 0.149684844296164,
+          "rmse": 0.2399356751439521
+        },
+        {
+          "seed": 3,
+          "r2": 0.8826616260108806,
+          "mae": 0.15593726205882494,
+          "rmse": 0.24092343022527757
+        },
+        {
+          "seed": 4,
+          "r2": 0.8986539995712994,
+          "mae": 0.145264512563668,
+          "rmse": 0.22615751555053099
+        },
+        {
+          "seed": 5,
+          "r2": 0.893071186542488,
+          "mae": 0.15169101183646305,
+          "rmse": 0.22948967257970454
+        },
+        {
+          "seed": 6,
+          "r2": 0.8928371752898437,
+          "mae": 0.14867643752575999,
+          "rmse": 0.23032298358745795
+        },
+        {
+          "seed": 7,
+          "r2": 0.8995940637066844,
+          "mae": 0.14514150000084622,
+          "rmse": 0.22388641827118927
+        },
+        {
+          "seed": 8,
+          "r2": 0.8966576849859709,
+          "mae": 0.14669175238018983,
+          "rmse": 0.2288462711792381
+        },
+        {
+          "seed": 9,
+          "r2": 0.8923383103654892,
+          "mae": 0.16033779347147786,
+          "rmse": 0.2343789707497173
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.8651506315988161,
+        "r2_std": 0.009204634874532732,
+        "mae_mean": 0.18541106822048012,
+        "mae_std": 0.004563848035240471,
+        "rmse_mean": 0.25810148474613004,
+        "rmse_std": 0.007057978249921871
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8499451106756679,
+          "mae": 0.18969399148710486,
+          "rmse": 0.2675037035772481
+        },
+        {
+          "seed": 1,
+          "r2": 0.8576329333579434,
+          "mae": 0.18334538237814674,
+          "rmse": 0.2544593832020693
+        },
+        {
+          "seed": 2,
+          "r2": 0.8654219694548556,
+          "mae": 0.18294791099452362,
+          "rmse": 0.26336623012873445
+        },
+        {
+          "seed": 3,
+          "r2": 0.864215942409378,
+          "mae": 0.17926009057644507,
+          "rmse": 0.2591692048643443
+        },
+        {
+          "seed": 4,
+          "r2": 0.8670547359488592,
+          "mae": 0.18705759553838033,
+          "rmse": 0.2590264735350955
+        },
+        {
+          "seed": 5,
+          "r2": 0.869338436250233,
+          "mae": 0.18693736987345322,
+          "rmse": 0.25368202645078536
+        },
+        {
+          "seed": 6,
+          "r2": 0.8564942233758793,
+          "mae": 0.19408776242955578,
+          "rmse": 0.2665323282717795
+        },
+        {
+          "seed": 7,
+          "r2": 0.8701447713314225,
+          "mae": 0.18557899838326045,
+          "rmse": 0.2546113584732727
+        },
+        {
+          "seed": 8,
+          "r2": 0.8674675344353409,
+          "mae": 0.18612194239996657,
+          "rmse": 0.25915875568806473
+        },
+        {
+          "seed": 9,
+          "r2": 0.8837906587485813,
+          "mae": 0.1790796381439648,
+          "rmse": 0.2435053832699063
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.6474909759921161,
+        "r2_std": 0.026707335281526155,
+        "mae_mean": 0.30437726313554414,
+        "mae_std": 0.014687291520887718,
+        "rmse_mean": 0.41749404603928897,
+        "rmse_std": 0.019511079244540843
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.6732500216557492,
+          "mae": 0.28387917708368127,
+          "rmse": 0.3947412458733102
+        },
+        {
+          "seed": 1,
+          "r2": 0.6808827983610082,
+          "mae": 0.2797319313574992,
+          "rmse": 0.380968273010718
+        },
+        {
+          "seed": 2,
+          "r2": 0.6611796072728662,
+          "mae": 0.30166164491487446,
+          "rmse": 0.41788595390593475
+        },
+        {
+          "seed": 3,
+          "r2": 0.5946086799594217,
+          "mae": 0.3293358827021707,
+          "rmse": 0.4478125163341066
+        },
+        {
+          "seed": 4,
+          "r2": 0.643671347514601,
+          "mae": 0.30860169513865565,
+          "rmse": 0.42406564503566935
+        },
+        {
+          "seed": 5,
+          "r2": 0.6284865250310256,
+          "mae": 0.31194822337225847,
+          "rmse": 0.4277628432043187
+        },
+        {
+          "seed": 6,
+          "r2": 0.649262463577293,
+          "mae": 0.30562475551886314,
+          "rmse": 0.41668352066962633
+        },
+        {
+          "seed": 7,
+          "r2": 0.6337505923549601,
+          "mae": 0.3108334071372493,
+          "rmse": 0.4275988404942378
+        },
+        {
+          "seed": 8,
+          "r2": 0.6770372672427568,
+          "mae": 0.29715076294296655,
+          "rmse": 0.40455814843542237
+        },
+        {
+          "seed": 9,
+          "r2": 0.632780456951479,
+          "mae": 0.3150051511872226,
+          "rmse": 0.4328634734295448
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.8287111500290955,
+        "r2_std": 0.017610677577928353,
+        "mae_mean": 0.21850963416665237,
+        "mae_std": 0.013816367742723011,
+        "rmse_mean": 0.2908584931265017,
+        "rmse_std": 0.017677477806261804
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8447320922094262,
+          "mae": 0.20792867566084952,
+          "rmse": 0.2721106716255114
+        },
+        {
+          "seed": 1,
+          "r2": 0.842004042471805,
+          "mae": 0.1988098277522728,
+          "rmse": 0.2680628862459303
+        },
+        {
+          "seed": 2,
+          "r2": 0.8284274642363869,
+          "mae": 0.22245100232045406,
+          "rmse": 0.2973698186561002
+        },
+        {
+          "seed": 3,
+          "r2": 0.8129338491059019,
+          "mae": 0.22682481916464575,
+          "rmse": 0.30419817918682296
+        },
+        {
+          "seed": 4,
+          "r2": 0.8147520561325863,
+          "mae": 0.2298735416104506,
+          "rmse": 0.30576263729366643
+        },
+        {
+          "seed": 5,
+          "r2": 0.8240958141317276,
+          "mae": 0.22043090511096705,
+          "rmse": 0.29434310004304076
+        },
+        {
+          "seed": 6,
+          "r2": 0.8275854221263208,
+          "mae": 0.2193492475642356,
+          "rmse": 0.29214751259371624
+        },
+        {
+          "seed": 7,
+          "r2": 0.8196957805474077,
+          "mae": 0.22775052777708873,
+          "rmse": 0.30002054695636676
+        },
+        {
+          "seed": 8,
+          "r2": 0.8655165279094368,
+          "mae": 0.19462430322265595,
+          "rmse": 0.26105932090921496
+        },
+        {
+          "seed": 9,
+          "r2": 0.8073684514199562,
+          "mae": 0.23705349148290364,
+          "rmse": 0.31351025775464686
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.8898558762783386,
+        "r2_std": 0.006570672998194243,
+        "mae_mean": 0.1519487536636261,
+        "mae_std": 0.006127231905191301,
+        "rmse_mean": 0.23337950660033663,
+        "rmse_std": 0.008366258053352104
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8909929690194254,
+          "mae": 0.1501813879014695,
+          "rmse": 0.2279984944567878
+        },
+        {
+          "seed": 1,
+          "r2": 0.8880767892193782,
+          "mae": 0.1474133380923578,
+          "rmse": 0.22561801913787763
+        },
+        {
+          "seed": 2,
+          "r2": 0.8796072062387141,
+          "mae": 0.15610947418873652,
+          "rmse": 0.24909972568574165
+        },
+        {
+          "seed": 3,
+          "r2": 0.8820653316793915,
+          "mae": 0.15643339126010913,
+          "rmse": 0.24153482110036045
+        },
+        {
+          "seed": 4,
+          "r2": 0.900216029613113,
+          "mae": 0.14495223928849335,
+          "rmse": 0.2244078824716093
+        },
+        {
+          "seed": 5,
+          "r2": 0.8904243717580481,
+          "mae": 0.15261246446996624,
+          "rmse": 0.23231259559907033
+        },
+        {
+          "seed": 6,
+          "r2": 0.8909340031093365,
+          "mae": 0.15085282736772623,
+          "rmse": 0.23235920827817697
+        },
+        {
+          "seed": 7,
+          "r2": 0.8968619974801484,
+          "mae": 0.1461091568078987,
+          "rmse": 0.226911972713918
+        },
+        {
+          "seed": 8,
+          "r2": 0.8951863345003371,
+          "mae": 0.14927560028453493,
+          "rmse": 0.23046962860644338
+        },
+        {
+          "seed": 9,
+          "r2": 0.8841937301654947,
+          "mae": 0.16554765697496826,
+          "rmse": 0.24308271795338085
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.865269357510267,
+        "r2_std": 0.009197725023383837,
+        "mae_mean": 0.1852909334972796,
+        "mae_std": 0.004564607999823609,
+        "rmse_mean": 0.25798689000188574,
+        "rmse_std": 0.007018200529156903
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8499120467143785,
+          "mae": 0.18965163626215922,
+          "rmse": 0.2675331736097427
+        },
+        {
+          "seed": 1,
+          "r2": 0.8576369482916331,
+          "mae": 0.18330787853092548,
+          "rmse": 0.2544557951364537
+        },
+        {
+          "seed": 2,
+          "r2": 0.865582296567061,
+          "mae": 0.18279954801795048,
+          "rmse": 0.26320930507054535
+        },
+        {
+          "seed": 3,
+          "r2": 0.8643968255049246,
+          "mae": 0.17907019080013678,
+          "rmse": 0.25899652276999946
+        },
+        {
+          "seed": 4,
+          "r2": 0.8670096071786675,
+          "mae": 0.187278634908807,
+          "rmse": 0.25907043356042764
+        },
+        {
+          "seed": 5,
+          "r2": 0.8694185757827633,
+          "mae": 0.18690770592071948,
+          "rmse": 0.2536042182696286
+        },
+        {
+          "seed": 6,
+          "r2": 0.8569965201535636,
+          "mae": 0.193666049305588,
+          "rmse": 0.2660654631462175
+        },
+        {
+          "seed": 7,
+          "r2": 0.8699872314558166,
+          "mae": 0.18563972748534494,
+          "rmse": 0.25476575842991833
+        },
+        {
+          "seed": 8,
+          "r2": 0.8678006642774503,
+          "mae": 0.1858206920011293,
+          "rmse": 0.2588328437137668
+        },
+        {
+          "seed": 9,
+          "r2": 0.883952859176413,
+          "mae": 0.17876727174003526,
+          "rmse": 0.24333538631215748
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.6129626770797552,
+        "r2_std": 0.021451235974272766,
+        "mae_mean": 0.3353458131069629,
+        "mae_std": 0.011062789191500262,
+        "rmse_mean": 0.43755660634655974,
+        "rmse_std": 0.01616484661016095
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.6220471873456807,
+          "mae": 0.3247590433093523,
+          "rmse": 0.4245447889941919
+        },
+        {
+          "seed": 1,
+          "r2": 0.6403288792066396,
+          "mae": 0.31632345954286345,
+          "rmse": 0.40445153297024367
+        },
+        {
+          "seed": 2,
+          "r2": 0.6169935665003916,
+          "mae": 0.3377946718070544,
+          "rmse": 0.4442997179350505
+        },
+        {
+          "seed": 3,
+          "r2": 0.6000141142137558,
+          "mae": 0.33963179841196217,
+          "rmse": 0.44481696080029526
+        },
+        {
+          "seed": 4,
+          "r2": 0.6019468860477546,
+          "mae": 0.341790357937383,
+          "rmse": 0.4482065824385445
+        },
+        {
+          "seed": 5,
+          "r2": 0.5697094901334182,
+          "mae": 0.35392386827151406,
+          "rmse": 0.46035901946078184
+        },
+        {
+          "seed": 6,
+          "r2": 0.6255408158318833,
+          "mae": 0.33431351090915973,
+          "rmse": 0.43054390426415684
+        },
+        {
+          "seed": 7,
+          "r2": 0.6057688583140727,
+          "mae": 0.3419498990404882,
+          "rmse": 0.4436326662105087
+        },
+        {
+          "seed": 8,
+          "r2": 0.6422926654111851,
+          "mae": 0.32305914721569645,
+          "rmse": 0.4257637378487708
+        },
+        {
+          "seed": 9,
+          "r2": 0.6049843077927703,
+          "mae": 0.3399123746241547,
+          "rmse": 0.4489471525430533
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.8266726659783868,
+        "r2_std": 0.014392244479399305,
+        "mae_mean": 0.21743455839755396,
+        "mae_std": 0.00933417915769844,
+        "rmse_mean": 0.2926958525533014,
+        "rmse_std": 0.014739779750007707
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.8461189816320795,
+          "mae": 0.20511583861603755,
+          "rmse": 0.2708926674327256
+        },
+        {
+          "seed": 1,
+          "r2": 0.8305772623673584,
+          "mae": 0.20616864803277846,
+          "rmse": 0.2775872722396931
+        },
+        {
+          "seed": 2,
+          "r2": 0.8230914892213888,
+          "mae": 0.22338869027032196,
+          "rmse": 0.30195857439456647
+        },
+        {
+          "seed": 3,
+          "r2": 0.8188842016406781,
+          "mae": 0.22432173211500536,
+          "rmse": 0.29932098959485764
+        },
+        {
+          "seed": 4,
+          "r2": 0.8120956920357035,
+          "mae": 0.2244503106492596,
+          "rmse": 0.30794707688457473
+        },
+        {
+          "seed": 5,
+          "r2": 0.8160228569747265,
+          "mae": 0.2220901193135866,
+          "rmse": 0.3010216332126414
+        },
+        {
+          "seed": 6,
+          "r2": 0.8365324765092619,
+          "mae": 0.2161755896288906,
+          "rmse": 0.2844663779205042
+        },
+        {
+          "seed": 7,
+          "r2": 0.8193819415735826,
+          "mae": 0.22022500425355232,
+          "rmse": 0.3002815425209332
+        },
+        {
+          "seed": 8,
+          "r2": 0.8527963315116083,
+          "mae": 0.20317995395447255,
+          "rmse": 0.27312664121638497
+        },
+        {
+          "seed": 9,
+          "r2": 0.8112254263174813,
+          "mae": 0.22922969714163471,
+          "rmse": 0.3103557501161326
+        }
+      ]
+    }
+  ],
+  "oos_split_definition": {
+    "oos_imine": [
+      "O=C(/N=C/c1ccc(Cl)cc1Cl)c1ccccc1"
+    ],
+    "oos_thiol": [
+      "Cc1ccccc1S"
+    ],
+    "n_oos_catalysts": 19,
+    "oos_catalysts": [
+      "O=P1(O)Oc2c(-c3c(C4CCCCC4)cc(C4CCCCC4)cc3C3CCCCC3)cc3ccccc3c2-c2c(c(-c3c(C4CCCCC4)cc(C4CCCCC4)cc3C3CCCCC3)cc3ccccc23)O1",
+      "CC(C)c1cc(C(C)C)c(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4c(C(C)C)cc(C(C)C)cc4C(C)C)cc4ccccc4c2-3)c(C(C)C)c1",
+      "COc1cccc(OC)c1-c1cc2ccccc2c2c1OP(=O)(O)Oc1c(-c3c(OC)cccc3OC)cc3ccccc3c1-2",
+      "Cc1cc(C)c(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4c(C)cc(C)cc4C)cc4ccccc4c2-3)c(C)c1",
+      "O=P1(O)Oc2c(-c3c4ccccc4cc4ccccc34)cc3ccccc3c2-c2c(c(-c3c4ccccc4cc4ccccc34)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(-c3ccc4ccc5cccc6ccc3c4c56)cc3ccccc3c2-c2c(c(-c3ccc4ccc5cccc6ccc3c4c56)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(-c3ccccc3OC(F)(F)F)cc3ccccc3c2-c2c(c(-c3ccccc3OC(F)(F)F)cc3ccccc23)O1",
+      "CC(C)(C)c1cc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4cc(C(C)(C)C)cc(C(C)(C)C)c4)cc4ccccc4c2-3)cc(C(C)(C)C)c1",
+      "CC(C)(C)c1cc(-c2cc3c(c4c2OP(=O)(O)Oc2c(-c5cc(C(C)(C)C)cc(C(C)(C)C)c5)cc5c(c2-4)CCCC5)CCCC3)cc(C(C)(C)C)c1",
+      "Cc1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(C)cc4)cc4ccccc4c2-3)cc1",
+      "CC(C)(C)c1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(C(C)(C)C)cc4)cc4ccccc4c2-3)cc1",
+      "O=P1(O)Oc2c(-c3ccc(-c4ccc5ccccc5c4)cc3)cc3ccccc3c2-c2c(c(-c3ccc(-c4ccc5ccccc5c4)cc3)cc3ccccc23)O1",
+      "COc1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(OC)cc4)cc4ccccc4c2-3)cc1",
+      "COCc1cccc(-c2cc3c(c4c2OP(=O)(O)Oc2c(-c5cccc(COC)c5)cc5c(c2-4)CCCC5)CCCC3)c1",
+      "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "C[Si](c1ccccc1)(c1ccccc1)c1cc2ccccc2c2c1OP(=O)(O)Oc1c([Si](C)(c3ccccc3)c3ccccc3)cc3ccccc3c1-2",
+      "O=P1(O)Oc2c(Br)cc3c(c2-c2c4c(cc(Br)c2O1)CCCC4)CCCC3",
+      "O=P1(O)Oc2c([Si](c3ccccc3)(c3ccccc3)c3ccccc3)cc3ccccc3c2-c2c(c([Si](c3ccccc3)(c3ccccc3)c3ccccc3)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(Cc3ccc(C(F)(F)F)cc3C(F)(F)F)cc3ccccc3c2-c2c(c(Cc3ccc(C(F)(F)F)cc3C(F)(F)F)cc3ccccc23)O1"
+    ]
+  },
+  "split_idx_sizes": {
+    "train": 384,
+    "substrate_oos": 216,
+    "catalyst_oos": 304,
+    "substrate_catalyst_oos": 171
+  },
+  "oos_results": [
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8514246711780895,
+          "mae": 0.19225287756172238,
+          "rmse": 0.2665339943263379
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.42318094760731495,
+          "mae": 0.3844348921289868,
+          "rmse": 0.532515791454749
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.2386033586938009,
+          "mae": 0.4811514494511932,
+          "rmse": 0.6406863971272372
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8493790045467068,
+          "mae": 0.19947460773442968,
+          "rmse": 0.26836261460611915
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.6207798731040168,
+          "mae": 0.3524523930509778,
+          "rmse": 0.4317758842904407
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.6229388758736738,
+          "mae": 0.35420062647575434,
+          "rmse": 0.4508643573100835
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.36164532438100006,
+          "mae": 0.4157943944315152,
+          "rmse": 0.5524720092386064
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.4060469079496106,
+          "mae": 0.3901695161269569,
+          "rmse": 0.5403669346805253
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": -0.0074724254051654615,
+          "mae": 0.5680925431635119,
+          "rmse": 0.7369815388666393
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.746756085865202,
+          "mae": 0.25180773498319764,
+          "rmse": 0.3479755792000318
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.6631286687395936,
+          "mae": 0.314043710999215,
+          "rmse": 0.40695343545535567
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.49958396236204694,
+          "mae": 0.38395724974757584,
+          "rmse": 0.5194044125379801
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.9208115949831773,
+          "mae": 0.14015407575574035,
+          "rmse": 0.19458531221562392
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.4655392166742789,
+          "mae": 0.3681471025674734,
+          "rmse": 0.5125905727176842
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.42309379777399203,
+          "mae": 0.4065183326839999,
+          "rmse": 0.5576897068892436
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8932961667585126,
+          "mae": 0.17509746515819846,
+          "rmse": 0.2258755735725719
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.5319769070536191,
+          "mae": 0.3650287722046162,
+          "rmse": 0.47967417122093303
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.5343860940280857,
+          "mae": 0.37363728267313867,
+          "rmse": 0.5010176160093304
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": -0.3547207248989188,
+          "mae": 0.6073931507369841,
+          "rmse": 0.8048299792418009
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.3917554867221438,
+          "mae": 0.4002238596962753,
+          "rmse": 0.5468293201241727
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": -0.9294072117821552,
+          "mae": 0.7946073425064937,
+          "rmse": 1.0198868064691333
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.3470981702779996,
+          "mae": 0.3915057867820894,
+          "rmse": 0.5587315565823409
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.6223313173972096,
+          "mae": 0.34205641604977294,
+          "rmse": 0.43089175034124494
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": -0.07631692889857722,
+          "mae": 0.5674881405410072,
+          "rmse": 0.7617458739089825
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.9045637121632835,
+          "mae": 0.15330496334066637,
+          "rmse": 0.21361710588193142
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.5356059197791911,
+          "mae": 0.34853030213232883,
+          "rmse": 0.4778108751145274
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.416668400606347,
+          "mae": 0.423369926363111,
+          "rmse": 0.5607867921689277
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8946630794049202,
+          "mae": 0.17282886261709715,
+          "rmse": 0.22442413851845627
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.6061376940610388,
+          "mae": 0.3309135356019238,
+          "rmse": 0.4400326503941489
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.5994142220986598,
+          "mae": 0.33857939865918935,
+          "rmse": 0.4647161741650961
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": -0.2567606136449405,
+          "mae": 0.5946742958560023,
+          "rmse": 0.7751853178941907
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.4128037661652314,
+          "mae": 0.39738455408701806,
+          "rmse": 0.5372845142533061
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": -0.8037297407539858,
+          "mae": 0.767540967852589,
+          "rmse": 0.9861108970498572
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.46230965760763765,
+          "mae": 0.36408667223568364,
+          "rmse": 0.5070436821952191
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.5974784810548658,
+          "mae": 0.33591566066315187,
+          "rmse": 0.4448434949086778
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.04084401358614598,
+          "mae": 0.5260188851942682,
+          "rmse": 0.7190923122488879
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.9077169512050979,
+          "mae": 0.1498935749992772,
+          "rmse": 0.21005848298468335
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.43173220020715486,
+          "mae": 0.39396485919846713,
+          "rmse": 0.5285538208980547
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.3429993129028863,
+          "mae": 0.4638041447828073,
+          "rmse": 0.5951452021107146
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8938010577960991,
+          "mae": 0.17453974380716655,
+          "rmse": 0.2253405516653423
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.5827457766908377,
+          "mae": 0.3227068291970614,
+          "rmse": 0.4529112029449213
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.5889568330523454,
+          "mae": 0.32876149849827146,
+          "rmse": 0.4707428598478009
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.44348979734704375,
+          "mae": 0.3916526275441753,
+          "rmse": 0.5158409588998542
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.4558319988693603,
+          "mae": 0.36936790696474914,
+          "rmse": 0.5172246242941079
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.0258446797023989,
+          "mae": 0.5636463294472591,
+          "rmse": 0.7246931033157824
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8137956315979322,
+          "mae": 0.22632954329943725,
+          "rmse": 0.29838307853369683
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.5853833322467251,
+          "mae": 0.3250175429455297,
+          "rmse": 0.45147745802244615
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.4344623923939047,
+          "mae": 0.4028668392145363,
+          "rmse": 0.5521674098995215
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.9171109083254783,
+          "mae": 0.14423848089481434,
+          "rmse": 0.1990801448084012
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.2393984580987506,
+          "mae": 0.4557241754470591,
+          "rmse": 0.6114927234230221
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.1368854726714498,
+          "mae": 0.5148876130787485,
+          "rmse": 0.6821411328618572
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.8925445553893359,
+          "mae": 0.17630265562827727,
+          "rmse": 0.22666970031723177
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.3844618485721606,
+          "mae": 0.4180736260832731,
+          "rmse": 0.5500981452544984
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": 0.4284456456591461,
+          "mae": 0.41534416498118804,
+          "rmse": 0.5550968895343598
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": -0.4448407337535967,
+          "mae": 0.6585413591444762,
+          "rmse": 0.8311688262051917
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.24832389920589926,
+          "mae": 0.4481261235908801,
+          "rmse": 0.6078942896947203
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": -1.1352048837159154,
+          "mae": 0.8746044595058985,
+          "rmse": 1.0729013752534142
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1075,
+      "n_unique_smiles": 53,
+      "encoded_molecules": [
+        "Imine",
+        "Thiol",
+        "Catalyst"
+      ],
+      "excluded_molecules": [
+        "Product"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/thiol_add_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 216,
+          "r2": 0.3773362956553631,
+          "mae": 0.42845560696177815,
+          "rmse": 0.5456397901466716
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 304,
+          "r2": 0.3071805737730273,
+          "mae": 0.4388673012780747,
+          "rmse": 0.5836099948251698
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 171,
+          "r2": -0.19619335625767786,
+          "mae": 0.6104573824666698,
+          "rmse": 0.8030465449298008
+        }
+      ]
+    }
+  ]
+}

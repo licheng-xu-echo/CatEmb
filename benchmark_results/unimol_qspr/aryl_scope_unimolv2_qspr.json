@@ -1,0 +1,2845 @@
+{
+  "task": "Aryl scope yield prediction",
+  "dataset_file": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/dataset/rxn_data/aryl-scope-ligand.csv",
+  "model_name": "unimolv2",
+  "searched_model_sizes": [
+    "84m",
+    "164m",
+    "310m",
+    "570m",
+    "1.1B"
+  ],
+  "searched_model_types": [
+    "ExtraTrees",
+    "Ridge",
+    "KernelRidge",
+    "SVR"
+  ],
+  "batch_size": 128,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "n_estimators": 500,
+  "random_seed": 42,
+  "use_cache": true,
+  "random_results": [
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.7931503204511636,
+        "r2_std": 0.03742696547782658,
+        "mae_mean": 8.13123755844156,
+        "mae_std": 0.39193298369678553,
+        "rmse_mean": 13.277990489675798,
+        "rmse_std": 1.041948699998681
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.7773982936394155,
+          "mae": 7.709719870129877,
+          "rmse": 13.108935854489387
+        },
+        {
+          "seed": 1,
+          "r2": 0.8155966363581145,
+          "mae": 8.15343188311688,
+          "rmse": 12.534298838819215
+        },
+        {
+          "seed": 2,
+          "r2": 0.8157981369259844,
+          "mae": 8.183252142857159,
+          "rmse": 12.87767917195665
+        },
+        {
+          "seed": 3,
+          "r2": 0.7632882684595503,
+          "mae": 8.645248116883115,
+          "rmse": 14.446842150572904
+        },
+        {
+          "seed": 4,
+          "r2": 0.8264507270275889,
+          "mae": 7.661059155844172,
+          "rmse": 12.37990582550785
+        },
+        {
+          "seed": 5,
+          "r2": 0.7782746820403117,
+          "mae": 8.12766772727273,
+          "rmse": 13.533926130144547
+        },
+        {
+          "seed": 6,
+          "r2": 0.8355066238859393,
+          "mae": 7.744760649350653,
+          "rmse": 12.089193785632025
+        },
+        {
+          "seed": 7,
+          "r2": 0.7968469532111008,
+          "mae": 8.150149805194802,
+          "rmse": 13.405095537553093
+        },
+        {
+          "seed": 8,
+          "r2": 0.7098530730050825,
+          "mae": 8.88028844155844,
+          "rmse": 15.553624538391682
+        },
+        {
+          "seed": 9,
+          "r2": 0.8124898099585476,
+          "mae": 8.056797792207796,
+          "rmse": 12.850403063690628
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.5613283606787502,
+        "r2_std": 0.03745059437645474,
+        "mae_mean": 15.471375007901873,
+        "mae_std": 0.3902705246693392,
+        "rmse_mean": 19.392199491373596,
+        "rmse_std": 0.5444455780415648
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.506999805866605,
+          "mae": 15.271234776756978,
+          "rmse": 19.50862851542284
+        },
+        {
+          "seed": 1,
+          "r2": 0.5698766946954289,
+          "mae": 15.533587318395638,
+          "rmse": 19.14309315557768
+        },
+        {
+          "seed": 2,
+          "r2": 0.5575696587572359,
+          "mae": 15.939577436075583,
+          "rmse": 19.95781732414755
+        },
+        {
+          "seed": 3,
+          "r2": 0.596148146169033,
+          "mae": 15.152958501221297,
+          "rmse": 18.870094577414783
+        },
+        {
+          "seed": 4,
+          "r2": 0.6020464922519257,
+          "mae": 14.98467194371409,
+          "rmse": 18.746582620165874
+        },
+        {
+          "seed": 5,
+          "r2": 0.4970355318801418,
+          "mae": 15.943908211101185,
+          "rmse": 20.383784124556733
+        },
+        {
+          "seed": 6,
+          "r2": 0.6017290464421439,
+          "mae": 15.053140839044149,
+          "rmse": 18.811024498199423
+        },
+        {
+          "seed": 7,
+          "r2": 0.5850649116510961,
+          "mae": 15.21455977972452,
+          "rmse": 19.157918633746945
+        },
+        {
+          "seed": 8,
+          "r2": 0.5433768518150979,
+          "mae": 15.615350533770277,
+          "rmse": 19.51199092546421
+        },
+        {
+          "seed": 9,
+          "r2": 0.5534364672587927,
+          "mae": 16.00476073921501,
+          "rmse": 19.831060539039942
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.5356425524775288,
+        "r2_std": 0.02434248331767784,
+        "mae_mean": 15.584666096409268,
+        "mae_std": 0.41883062322177983,
+        "rmse_mean": 19.968401003246708,
+        "rmse_std": 0.4279457526436912
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.49090300239622375,
+          "mae": 15.42734993070658,
+          "rmse": 19.824555646541743
+        },
+        {
+          "seed": 1,
+          "r2": 0.5366710862225104,
+          "mae": 15.187500513608935,
+          "rmse": 19.86828252390322
+        },
+        {
+          "seed": 2,
+          "r2": 0.5223704662584439,
+          "mae": 16.118370635505713,
+          "rmse": 20.736534490984212
+        },
+        {
+          "seed": 3,
+          "r2": 0.5411091669817394,
+          "mae": 16.016181366717326,
+          "rmse": 20.11489303851436
+        },
+        {
+          "seed": 4,
+          "r2": 0.5878062357415237,
+          "mae": 14.845080427883707,
+          "rmse": 19.079045791914968
+        },
+        {
+          "seed": 5,
+          "r2": 0.5208086048579795,
+          "mae": 15.239351563991152,
+          "rmse": 19.896224100200136
+        },
+        {
+          "seed": 6,
+          "r2": 0.5459464235649845,
+          "mae": 15.536289885444502,
+          "rmse": 20.085224136043855
+        },
+        {
+          "seed": 7,
+          "r2": 0.5330646483688083,
+          "mae": 16.030002759105823,
+          "rmse": 20.3229440388981
+        },
+        {
+          "seed": 8,
+          "r2": 0.533897555761746,
+          "mae": 15.623460872352753,
+          "rmse": 19.71348076875934
+        },
+        {
+          "seed": 9,
+          "r2": 0.543848334621329,
+          "mae": 15.823073008776191,
+          "rmse": 20.04282549670718
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.422948417109863,
+        "r2_std": 0.013360799325332573,
+        "mae_mean": 16.010371613102272,
+        "mae_std": 0.4906573768953342,
+        "rmse_mean": 22.273490706441965,
+        "rmse_std": 0.5769529054959263
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.4276127339236727,
+          "mae": 15.144625750857745,
+          "rmse": 21.020748467314778
+        },
+        {
+          "seed": 1,
+          "r2": 0.41870628225766593,
+          "mae": 15.872615512090855,
+          "rmse": 22.254274477008135
+        },
+        {
+          "seed": 2,
+          "r2": 0.43998859891100417,
+          "mae": 16.229258570369698,
+          "rmse": 22.453757410687206
+        },
+        {
+          "seed": 3,
+          "r2": 0.4448074404809942,
+          "mae": 16.28148418162101,
+          "rmse": 22.12508027449733
+        },
+        {
+          "seed": 4,
+          "r2": 0.4185452654127584,
+          "mae": 15.953596866901286,
+          "rmse": 22.660208275446283
+        },
+        {
+          "seed": 5,
+          "r2": 0.41410937763131406,
+          "mae": 15.32205732585896,
+          "rmse": 22.000088707509477
+        },
+        {
+          "seed": 6,
+          "r2": 0.42394733719553923,
+          "mae": 16.064336854276267,
+          "rmse": 22.623209972044314
+        },
+        {
+          "seed": 7,
+          "r2": 0.3989108944511264,
+          "mae": 16.611661871650828,
+          "rmse": 23.058320524103053
+        },
+        {
+          "seed": 8,
+          "r2": 0.42910024739621755,
+          "mae": 15.95614179868398,
+          "rmse": 21.817377729895266
+        },
+        {
+          "seed": 9,
+          "r2": 0.4137559934383368,
+          "mae": 16.66793739871207,
+          "rmse": 22.72184122591381
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.7796491187412473,
+        "r2_std": 0.04249395300762877,
+        "mae_mean": 8.245049318181824,
+        "mae_std": 0.4823352818462062,
+        "rmse_mean": 13.692710534390121,
+        "rmse_std": 1.133190966375712
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.746628685602823,
+          "mae": 7.917010584415595,
+          "rmse": 13.985626184273656
+        },
+        {
+          "seed": 1,
+          "r2": 0.8036010629156045,
+          "mae": 8.289826298701298,
+          "rmse": 12.935558727862638
+        },
+        {
+          "seed": 2,
+          "r2": 0.8192011801189901,
+          "mae": 8.008082207792224,
+          "rmse": 12.758170082926316
+        },
+        {
+          "seed": 3,
+          "r2": 0.7333082444638355,
+          "mae": 9.056862337662336,
+          "rmse": 15.334436857529818
+        },
+        {
+          "seed": 4,
+          "r2": 0.8147606916269092,
+          "mae": 7.818912662337668,
+          "rmse": 12.79005809282712
+        },
+        {
+          "seed": 5,
+          "r2": 0.7567450100861732,
+          "mae": 8.215278766233773,
+          "rmse": 14.175782377123134
+        },
+        {
+          "seed": 6,
+          "r2": 0.8240629958636052,
+          "mae": 7.77666805194806,
+          "rmse": 12.502640058169439
+        },
+        {
+          "seed": 7,
+          "r2": 0.8070511596539232,
+          "mae": 8.091521298701297,
+          "rmse": 13.064095000406622
+        },
+        {
+          "seed": 8,
+          "r2": 0.7004465415976444,
+          "mae": 9.155130909090909,
+          "rmse": 15.803736950148476
+        },
+        {
+          "seed": 9,
+          "r2": 0.7906856154829647,
+          "mae": 8.121200064935076,
+          "rmse": 13.57700101263399
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.5613967972031007,
+        "r2_std": 0.037482163517126146,
+        "mae_mean": 15.470438330006289,
+        "mae_std": 0.3868119235191189,
+        "rmse_mean": 19.39057822995099,
+        "rmse_std": 0.5422689914006714
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5069901691606915,
+          "mae": 15.276369066486112,
+          "rmse": 19.508819182687596
+        },
+        {
+          "seed": 1,
+          "r2": 0.5695698126186926,
+          "mae": 15.554137507475813,
+          "rmse": 19.14992099381211
+        },
+        {
+          "seed": 2,
+          "r2": 0.5580287685658294,
+          "mae": 15.91829446284802,
+          "rmse": 19.94745952639083
+        },
+        {
+          "seed": 3,
+          "r2": 0.5963110523368129,
+          "mae": 15.13999902960542,
+          "rmse": 18.866288274645022
+        },
+        {
+          "seed": 4,
+          "r2": 0.6019487192864943,
+          "mae": 15.002309284457914,
+          "rmse": 18.74888539721274
+        },
+        {
+          "seed": 5,
+          "r2": 0.49701701475815885,
+          "mae": 15.944128776153962,
+          "rmse": 20.384159345439183
+        },
+        {
+          "seed": 6,
+          "r2": 0.6019559909108276,
+          "mae": 15.048252829019127,
+          "rmse": 18.805664245024325
+        },
+        {
+          "seed": 7,
+          "r2": 0.5850093907345716,
+          "mae": 15.204761340277535,
+          "rmse": 19.159200315692175
+        },
+        {
+          "seed": 8,
+          "r2": 0.5428222901665716,
+          "mae": 15.618538481724723,
+          "rmse": 19.523835833598373
+        },
+        {
+          "seed": 9,
+          "r2": 0.5543147634923556,
+          "mae": 15.997592522014273,
+          "rmse": 19.81154918500751
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.6054903232731732,
+        "r2_std": 0.02820349353421726,
+        "mae_mean": 14.090192213349273,
+        "mae_std": 0.40176152783498653,
+        "rmse_mean": 18.399094380697456,
+        "rmse_std": 0.5729982957283914
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.561915236857664,
+          "mae": 13.911009629849199,
+          "rmse": 18.39002281369957
+        },
+        {
+          "seed": 1,
+          "r2": 0.6103078892883467,
+          "mae": 13.750076762029156,
+          "rmse": 18.221177228043583
+        },
+        {
+          "seed": 2,
+          "r2": 0.5839051101169288,
+          "mae": 14.856638104549125,
+          "rmse": 19.354715101803485
+        },
+        {
+          "seed": 3,
+          "r2": 0.6059045633348105,
+          "mae": 14.60075330295531,
+          "rmse": 18.640765346676837
+        },
+        {
+          "seed": 4,
+          "r2": 0.6703319552674661,
+          "mae": 13.494108266400195,
+          "rmse": 17.062566924133638
+        },
+        {
+          "seed": 5,
+          "r2": 0.5946267044847924,
+          "mae": 13.9119541516315,
+          "rmse": 18.29968972910048
+        },
+        {
+          "seed": 6,
+          "r2": 0.6032693957607493,
+          "mae": 14.043373453725005,
+          "rmse": 18.774612579109977
+        },
+        {
+          "seed": 7,
+          "r2": 0.6204011501349673,
+          "mae": 13.998918441695139,
+          "rmse": 18.32401706068773
+        },
+        {
+          "seed": 8,
+          "r2": 0.5921603754592812,
+          "mae": 14.013858003851244,
+          "rmse": 18.440272414069526
+        },
+        {
+          "seed": 9,
+          "r2": 0.6120808520267249,
+          "mae": 14.321232016806864,
+          "rmse": 18.48310460964972
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.528122076038686,
+        "r2_std": 0.01684832142190547,
+        "mae_mean": 14.52408480806172,
+        "mae_std": 0.3880550856107227,
+        "rmse_mean": 20.135882390265444,
+        "rmse_std": 0.4181101323503181
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5095911234484157,
+          "mae": 13.995382980012815,
+          "rmse": 19.457290141397326
+        },
+        {
+          "seed": 1,
+          "r2": 0.5192164139449674,
+          "mae": 14.498689668039738,
+          "rmse": 20.239064838078153
+        },
+        {
+          "seed": 2,
+          "r2": 0.5353941710909416,
+          "mae": 14.886636050188915,
+          "rmse": 20.45186507430188
+        },
+        {
+          "seed": 3,
+          "r2": 0.5366859385719757,
+          "mae": 14.79772822298993,
+          "rmse": 20.211603831082925
+        },
+        {
+          "seed": 4,
+          "r2": 0.5697776177655539,
+          "mae": 14.003999482115079,
+          "rmse": 19.49182223731347
+        },
+        {
+          "seed": 5,
+          "r2": 0.5189894303916924,
+          "mae": 14.242244352577005,
+          "rmse": 19.933954761067664
+        },
+        {
+          "seed": 6,
+          "r2": 0.5226707410339594,
+          "mae": 14.68240713965292,
+          "rmse": 20.593594652919723
+        },
+        {
+          "seed": 7,
+          "r2": 0.5296211504442505,
+          "mae": 14.85055741272681,
+          "rmse": 20.397743971305704
+        },
+        {
+          "seed": 8,
+          "r2": 0.5220161149923206,
+          "mae": 14.217577398480612,
+          "rmse": 19.963158309006552
+        },
+        {
+          "seed": 9,
+          "r2": 0.5172580587027833,
+          "mae": 15.065625373833404,
+          "rmse": 20.618726086181066
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.7733152992177557,
+        "r2_std": 0.0393082907837659,
+        "mae_mean": 8.448645058441565,
+        "mae_std": 0.5451416124305791,
+        "rmse_mean": 13.902968001259762,
+        "rmse_std": 1.0820995286966524
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.7559224108512188,
+          "mae": 7.8708553246753326,
+          "rmse": 13.726731736143725
+        },
+        {
+          "seed": 1,
+          "r2": 0.8053415201903079,
+          "mae": 8.431384870129873,
+          "rmse": 12.878114710350536
+        },
+        {
+          "seed": 2,
+          "r2": 0.7880143727638604,
+          "mae": 8.453748376623388,
+          "rmse": 13.8147744943728
+        },
+        {
+          "seed": 3,
+          "r2": 0.7330717357365013,
+          "mae": 9.583922727272732,
+          "rmse": 15.341234826268957
+        },
+        {
+          "seed": 4,
+          "r2": 0.8150198663362482,
+          "mae": 7.940109870129878,
+          "rmse": 12.781107455100113
+        },
+        {
+          "seed": 5,
+          "r2": 0.7454599096683678,
+          "mae": 8.502474675324684,
+          "rmse": 14.500876556601776
+        },
+        {
+          "seed": 6,
+          "r2": 0.8220924962994207,
+          "mae": 7.942619610389612,
+          "rmse": 12.572460072141505
+        },
+        {
+          "seed": 7,
+          "r2": 0.770494860502745,
+          "mae": 8.879286168831173,
+          "rmse": 14.2480178733424
+        },
+        {
+          "seed": 8,
+          "r2": 0.70067681220906,
+          "mae": 8.858432402597403,
+          "rmse": 15.797661514028908
+        },
+        {
+          "seed": 9,
+          "r2": 0.7970590076198267,
+          "mae": 8.023616558441569,
+          "rmse": 13.368700774246916
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.5615808857649269,
+        "r2_std": 0.037405290338098696,
+        "mae_mean": 15.470896544245932,
+        "mae_std": 0.3868203280130383,
+        "rmse_mean": 19.38658324904828,
+        "rmse_std": 0.5426921816838375
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5082285064067478,
+          "mae": 15.279098810468401,
+          "rmse": 19.484302747862504
+        },
+        {
+          "seed": 1,
+          "r2": 0.5699011135942644,
+          "mae": 15.536791038637036,
+          "rmse": 19.142549753390288
+        },
+        {
+          "seed": 2,
+          "r2": 0.5587237795126798,
+          "mae": 15.895969816554677,
+          "rmse": 19.931769413220913
+        },
+        {
+          "seed": 3,
+          "r2": 0.5962611706889744,
+          "mae": 15.149748615537371,
+          "rmse": 18.86745384096024
+        },
+        {
+          "seed": 4,
+          "r2": 0.6017200170436574,
+          "mae": 15.008514815367663,
+          "rmse": 18.754270754094623
+        },
+        {
+          "seed": 5,
+          "r2": 0.49757011629960435,
+          "mae": 15.933876913491781,
+          "rmse": 20.37294861716978
+        },
+        {
+          "seed": 6,
+          "r2": 0.6029499016482984,
+          "mae": 15.029409512606536,
+          "rmse": 18.782170820086012
+        },
+        {
+          "seed": 7,
+          "r2": 0.5854593223510318,
+          "mae": 15.202378120174657,
+          "rmse": 19.14881132425804
+        },
+        {
+          "seed": 8,
+          "r2": 0.5412115776694306,
+          "mae": 15.664694259197681,
+          "rmse": 19.558198441272577
+        },
+        {
+          "seed": 9,
+          "r2": 0.5537833524345792,
+          "mae": 16.008483540423505,
+          "rmse": 19.823356778167796
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.5622027373101282,
+        "r2_std": 0.01918292742532785,
+        "mae_mean": 15.156192812227085,
+        "mae_std": 0.4104378853146131,
+        "rmse_mean": 19.393335238324063,
+        "rmse_std": 0.45427304843257466
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5361075966448651,
+          "mae": 14.591761478060237,
+          "rmse": 18.923951403203517
+        },
+        {
+          "seed": 1,
+          "r2": 0.5720344675890292,
+          "mae": 14.936365895009983,
+          "rmse": 19.095015799357167
+        },
+        {
+          "seed": 2,
+          "r2": 0.5480386503556476,
+          "mae": 15.738815430040619,
+          "rmse": 20.171641463915908
+        },
+        {
+          "seed": 3,
+          "r2": 0.5728506549609553,
+          "mae": 15.471768875231723,
+          "rmse": 19.40675436109327
+        },
+        {
+          "seed": 4,
+          "r2": 0.5981967793889433,
+          "mae": 14.654806196845195,
+          "rmse": 18.837039496928508
+        },
+        {
+          "seed": 5,
+          "r2": 0.5478048378268885,
+          "mae": 14.754251769656571,
+          "rmse": 19.327652755988215
+        },
+        {
+          "seed": 6,
+          "r2": 0.5593761994509747,
+          "mae": 15.291048586328627,
+          "rmse": 19.785959151871737
+        },
+        {
+          "seed": 7,
+          "r2": 0.5471467405678642,
+          "mae": 15.66923042536532,
+          "rmse": 20.014142723819518
+        },
+        {
+          "seed": 8,
+          "r2": 0.5569383006044301,
+          "mae": 15.280978065613034,
+          "rmse": 19.220059500992612
+        },
+        {
+          "seed": 9,
+          "r2": 0.583533145711684,
+          "mae": 15.172901400119555,
+          "rmse": 19.15113572607014
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.4387668074974257,
+        "r2_std": 0.020369013883400865,
+        "mae_mean": 15.642471078010331,
+        "mae_std": 0.4769549599091404,
+        "rmse_mean": 21.964578777944745,
+        "rmse_std": 0.6663917896249779
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.43809463175991803,
+          "mae": 14.794715315075903,
+          "rmse": 20.827386881856423
+        },
+        {
+          "seed": 1,
+          "r2": 0.4665687262200724,
+          "mae": 15.462739711007098,
+          "rmse": 21.318412550837373
+        },
+        {
+          "seed": 2,
+          "r2": 0.44275468936360063,
+          "mae": 15.745131787358426,
+          "rmse": 22.39823531908433
+        },
+        {
+          "seed": 3,
+          "r2": 0.47383455367722693,
+          "mae": 15.702498073721669,
+          "rmse": 21.53893365775021
+        },
+        {
+          "seed": 4,
+          "r2": 0.4116343717925798,
+          "mae": 15.804125228078242,
+          "rmse": 22.794474710502747
+        },
+        {
+          "seed": 5,
+          "r2": 0.41956556599765327,
+          "mae": 14.99400401314288,
+          "rmse": 21.897409643497905
+        },
+        {
+          "seed": 6,
+          "r2": 0.41908981063721484,
+          "mae": 15.99462209503268,
+          "rmse": 22.718394107046844
+        },
+        {
+          "seed": 7,
+          "r2": 0.42943095808082987,
+          "mae": 15.96713531383963,
+          "rmse": 22.465306360020968
+        },
+        {
+          "seed": 8,
+          "r2": 0.45019791732085335,
+          "mae": 15.544838422977225,
+          "rmse": 21.410450905747346
+        },
+        {
+          "seed": 9,
+          "r2": 0.43649685012430794,
+          "mae": 16.41490081986955,
+          "rmse": 22.276783643103272
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.7908797047775449,
+        "r2_std": 0.027003905941938057,
+        "mae_mean": 7.954275058441562,
+        "mae_std": 0.1885383791022837,
+        "rmse_mean": 13.37053962380312,
+        "rmse_std": 0.6605711358365591
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.7440894763056756,
+          "mae": 8.009083831168835,
+          "rmse": 14.05553129865746
+        },
+        {
+          "seed": 1,
+          "r2": 0.8141179518008955,
+          "mae": 8.101184675324678,
+          "rmse": 12.584453203037533
+        },
+        {
+          "seed": 2,
+          "r2": 0.8000593438775703,
+          "mae": 7.828192597402616,
+          "rmse": 13.416559108459786
+        },
+        {
+          "seed": 3,
+          "r2": 0.7775721750411296,
+          "mae": 8.175481883116879,
+          "rmse": 14.004177089803255
+        },
+        {
+          "seed": 4,
+          "r2": 0.8080401455906975,
+          "mae": 7.8301612987013085,
+          "rmse": 13.020004897621323
+        },
+        {
+          "seed": 5,
+          "r2": 0.7732456323908836,
+          "mae": 7.949468441558445,
+          "rmse": 13.686550021578647
+        },
+        {
+          "seed": 6,
+          "r2": 0.835562578618254,
+          "mae": 7.523011558441564,
+          "rmse": 12.087137456210954
+        },
+        {
+          "seed": 7,
+          "r2": 0.8023674692592593,
+          "mae": 8.10356259740259,
+          "rmse": 13.221704891472955
+        },
+        {
+          "seed": 8,
+          "r2": 0.7619421120998146,
+          "mae": 7.999087402597404,
+          "rmse": 14.088472591227884
+        },
+        {
+          "seed": 9,
+          "r2": 0.7918001627912691,
+          "mae": 8.02351629870131,
+          "rmse": 13.54080567996139
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.5613454012566703,
+        "r2_std": 0.03685147425633056,
+        "mae_mean": 15.474562917028152,
+        "mae_std": 0.3816986803144654,
+        "rmse_mean": 19.392518037170454,
+        "rmse_std": 0.5314250114737004
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5074412797851171,
+          "mae": 15.26133609202001,
+          "rmse": 19.499891724096283
+        },
+        {
+          "seed": 1,
+          "r2": 0.5691915038812807,
+          "mae": 15.582433553670906,
+          "rmse": 19.158334659387833
+        },
+        {
+          "seed": 2,
+          "r2": 0.5584954899734362,
+          "mae": 15.924690048292085,
+          "rmse": 19.936924490579937
+        },
+        {
+          "seed": 3,
+          "r2": 0.5952689079266975,
+          "mae": 15.177628168254703,
+          "rmse": 18.8906247397587
+        },
+        {
+          "seed": 4,
+          "r2": 0.6012245134680234,
+          "mae": 15.01606757213543,
+          "rmse": 18.765933303174858
+        },
+        {
+          "seed": 5,
+          "r2": 0.4974678844517324,
+          "mae": 15.940720717070938,
+          "rmse": 20.375021203131062
+        },
+        {
+          "seed": 6,
+          "r2": 0.600748153849163,
+          "mae": 15.05410845335428,
+          "rmse": 18.83417487785461
+        },
+        {
+          "seed": 7,
+          "r2": 0.5849301646969587,
+          "mae": 15.213650932807427,
+          "rmse": 19.161029074044503
+        },
+        {
+          "seed": 8,
+          "r2": 0.545566338331396,
+          "mae": 15.569408342931178,
+          "rmse": 19.465155174867117
+        },
+        {
+          "seed": 9,
+          "r2": 0.5531197762028983,
+          "mae": 16.005585289744587,
+          "rmse": 19.838091124809626
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.5305060579288148,
+        "r2_std": 0.021194334942611685,
+        "mae_mean": 15.992485718799097,
+        "mae_std": 0.4610214371233112,
+        "rmse_mean": 20.084045087090896,
+        "rmse_std": 0.537294994064379
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5121038955875866,
+          "mae": 15.456605773377358,
+          "rmse": 19.407378192284078
+        },
+        {
+          "seed": 1,
+          "r2": 0.5289389226624821,
+          "mae": 15.851730963289615,
+          "rmse": 20.033380324782186
+        },
+        {
+          "seed": 2,
+          "r2": 0.5074600409043416,
+          "mae": 16.95898924219017,
+          "rmse": 21.05771903917545
+        },
+        {
+          "seed": 3,
+          "r2": 0.5746103127918077,
+          "mae": 15.511615315883429,
+          "rmse": 19.366739679944242
+        },
+        {
+          "seed": 4,
+          "r2": 0.5488008685703677,
+          "mae": 15.604449224145547,
+          "rmse": 19.96135733342454
+        },
+        {
+          "seed": 5,
+          "r2": 0.5043837453189115,
+          "mae": 16.048961169152612,
+          "rmse": 20.234334690793126
+        },
+        {
+          "seed": 6,
+          "r2": 0.5347374654413801,
+          "mae": 16.01172590226827,
+          "rmse": 20.33162885234081
+        },
+        {
+          "seed": 7,
+          "r2": 0.5224443678551511,
+          "mae": 16.360961119808678,
+          "rmse": 20.55276370513487
+        },
+        {
+          "seed": 8,
+          "r2": 0.5416886836039054,
+          "mae": 15.793897677597416,
+          "rmse": 19.54802625805548
+        },
+        {
+          "seed": 9,
+          "r2": 0.5298922765522132,
+          "mae": 16.325920800277853,
+          "rmse": 20.347122794974226
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.3869528131337402,
+        "r2_std": 0.026292938017320282,
+        "mae_mean": 16.736157744784716,
+        "mae_std": 0.5976719720034274,
+        "rmse_mean": 22.956470685349366,
+        "rmse_std": 0.7991551455591654
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.39940123308528663,
+          "mae": 15.523544359621894,
+          "rmse": 21.53254739971352
+        },
+        {
+          "seed": 1,
+          "r2": 0.3927805565280694,
+          "mae": 16.56701002900987,
+          "rmse": 22.74513192859924
+        },
+        {
+          "seed": 2,
+          "r2": 0.40606034311632766,
+          "mae": 16.996818789535038,
+          "rmse": 23.12393573503317
+        },
+        {
+          "seed": 3,
+          "r2": 0.42840475638935693,
+          "mae": 16.613036094708345,
+          "rmse": 22.449534470693834
+        },
+        {
+          "seed": 4,
+          "r2": 0.3642414698582209,
+          "mae": 17.018599246750643,
+          "rmse": 23.694745021331016
+        },
+        {
+          "seed": 5,
+          "r2": 0.3658857928995216,
+          "mae": 16.583923957974417,
+          "rmse": 22.887581316084976
+        },
+        {
+          "seed": 6,
+          "r2": 0.36796580943853574,
+          "mae": 17.169303947912784,
+          "rmse": 23.69700271772135
+        },
+        {
+          "seed": 7,
+          "r2": 0.35667605943488856,
+          "mae": 17.18500368868526,
+          "rmse": 23.854652820689832
+        },
+        {
+          "seed": 8,
+          "r2": 0.42244492261010036,
+          "mae": 16.105905619405565,
+          "rmse": 21.944178456921815
+        },
+        {
+          "seed": 9,
+          "r2": 0.3656671879770942,
+          "mae": 17.598431714243326,
+          "rmse": 23.635396986704905
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_summary": {
+        "r2_mean": 0.7773386459206301,
+        "r2_std": 0.0352166813400743,
+        "mae_mean": 8.21307711688312,
+        "mae_std": 0.3507520300826095,
+        "rmse_mean": 13.78229107310359,
+        "rmse_std": 0.8788985729285408
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.7330823158154376,
+          "mae": 8.134070064935067,
+          "rmse": 14.354625542551132
+        },
+        {
+          "seed": 1,
+          "r2": 0.7902319802837074,
+          "mae": 8.427760584415587,
+          "rmse": 13.368579549449121
+        },
+        {
+          "seed": 2,
+          "r2": 0.7999669160528834,
+          "mae": 8.03169240259742,
+          "rmse": 13.419659828736906
+        },
+        {
+          "seed": 3,
+          "r2": 0.7755132441496033,
+          "mae": 8.169498766233769,
+          "rmse": 14.068843491922935
+        },
+        {
+          "seed": 4,
+          "r2": 0.8021221011395425,
+          "mae": 8.049089350649352,
+          "rmse": 13.219182147138529
+        },
+        {
+          "seed": 5,
+          "r2": 0.7664789470648414,
+          "mae": 8.176736493506498,
+          "rmse": 13.889262266737429
+        },
+        {
+          "seed": 6,
+          "r2": 0.8263462664548371,
+          "mae": 7.6300029870129915,
+          "rmse": 12.42124690485026
+        },
+        {
+          "seed": 7,
+          "r2": 0.808627681453985,
+          "mae": 7.994458506493502,
+          "rmse": 13.010614311611311
+        },
+        {
+          "seed": 8,
+          "r2": 0.7141862696815073,
+          "mae": 8.824510129870134,
+          "rmse": 15.43704490363361
+        },
+        {
+          "seed": 9,
+          "r2": 0.7568307371099562,
+          "mae": 8.692951883116896,
+          "rmse": 14.633851784404683
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_summary": {
+        "r2_mean": 0.5613487513305313,
+        "r2_std": 0.03694183228869166,
+        "mae_mean": 15.471401864064205,
+        "mae_std": 0.3833183709402863,
+        "rmse_mean": 19.392336812266258,
+        "rmse_std": 0.5357139951640626
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.5084180476210703,
+          "mae": 15.283749798366003,
+          "rmse": 19.480547513600957
+        },
+        {
+          "seed": 1,
+          "r2": 0.5693166822381028,
+          "mae": 15.546669203399063,
+          "rmse": 19.155551075604556
+        },
+        {
+          "seed": 2,
+          "r2": 0.5578699447445031,
+          "mae": 15.91632020665454,
+          "rmse": 19.951043297181666
+        },
+        {
+          "seed": 3,
+          "r2": 0.5964049734627828,
+          "mae": 15.12454183343169,
+          "rmse": 18.8640934584088
+        },
+        {
+          "seed": 4,
+          "r2": 0.6007338317459939,
+          "mae": 15.025477218504076,
+          "rmse": 18.777475223309757
+        },
+        {
+          "seed": 5,
+          "r2": 0.49788587444527854,
+          "mae": 15.926454524250774,
+          "rmse": 20.366545797874938
+        },
+        {
+          "seed": 6,
+          "r2": 0.602082189371408,
+          "mae": 15.03884952285073,
+          "rmse": 18.8026828736673
+        },
+        {
+          "seed": 7,
+          "r2": 0.5843897227603576,
+          "mae": 15.221635650659538,
+          "rmse": 19.173499331036005
+        },
+        {
+          "seed": 8,
+          "r2": 0.5426640683105093,
+          "mae": 15.626073198194625,
+          "rmse": 19.527213984207094
+        },
+        {
+          "seed": 9,
+          "r2": 0.5537221786053059,
+          "mae": 16.00424748433101,
+          "rmse": 19.824715567771488
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_summary": {
+        "r2_mean": 0.5737792470305549,
+        "r2_std": 0.029198513754320102,
+        "mae_mean": 14.856188845021446,
+        "mae_std": 0.2925268044827866,
+        "rmse_mean": 19.124690079172204,
+        "rmse_std": 0.4746902669028246
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.507341934482562,
+          "mae": 14.976515371882442,
+          "rmse": 19.50185811398316
+        },
+        {
+          "seed": 1,
+          "r2": 0.5742874568399623,
+          "mae": 14.746812029711053,
+          "rmse": 19.04468740658125
+        },
+        {
+          "seed": 2,
+          "r2": 0.5588933719850584,
+          "mae": 15.394977600631899,
+          "rmse": 19.92793892934421
+        },
+        {
+          "seed": 3,
+          "r2": 0.6095238420040632,
+          "mae": 14.786895751164623,
+          "rmse": 18.554971739727975
+        },
+        {
+          "seed": 4,
+          "r2": 0.6083668064903069,
+          "mae": 14.481395338331465,
+          "rmse": 18.597119797045988
+        },
+        {
+          "seed": 5,
+          "r2": 0.5664456975384292,
+          "mae": 14.467864029459296,
+          "rmse": 18.925088049092547
+        },
+        {
+          "seed": 6,
+          "r2": 0.5691236116541392,
+          "mae": 14.982379012631496,
+          "rmse": 19.565884250978964
+        },
+        {
+          "seed": 7,
+          "r2": 0.5929988576183403,
+          "mae": 14.919905853683227,
+          "rmse": 18.97387598276456
+        },
+        {
+          "seed": 8,
+          "r2": 0.5829254555881621,
+          "mae": 14.644639695424521,
+          "rmse": 18.647879981329478
+        },
+        {
+          "seed": 9,
+          "r2": 0.5678854361045247,
+          "mae": 15.160503767294442,
+          "rmse": 19.507596540873916
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_summary": {
+        "r2_mean": 0.4653041151892575,
+        "r2_std": 0.03228810209223978,
+        "mae_mean": 15.305989222369956,
+        "mae_std": 0.429245965745674,
+        "rmse_mean": 21.428146103382808,
+        "rmse_std": 0.6760207684102353
+      },
+      "metrics_by_seed": [
+        {
+          "seed": 0,
+          "r2": 0.42014085446299543,
+          "mae": 14.950777316926553,
+          "rmse": 21.15750486538333
+        },
+        {
+          "seed": 1,
+          "r2": 0.46695121249620886,
+          "mae": 15.425390727015348,
+          "rmse": 21.310768208613048
+        },
+        {
+          "seed": 2,
+          "r2": 0.4690456780757136,
+          "mae": 15.61738610838479,
+          "rmse": 21.863474081204004
+        },
+        {
+          "seed": 3,
+          "r2": 0.5299048210539021,
+          "mae": 14.87867057309443,
+          "rmse": 20.35897622110292
+        },
+        {
+          "seed": 4,
+          "r2": 0.4229562012449567,
+          "mae": 15.774975138097114,
+          "rmse": 22.57409408431704
+        },
+        {
+          "seed": 5,
+          "r2": 0.45482822301200676,
+          "mae": 14.711990958810778,
+          "rmse": 21.22183047239348
+        },
+        {
+          "seed": 6,
+          "r2": 0.4486633242249022,
+          "mae": 15.694100496978724,
+          "rmse": 22.132556103315142
+        },
+        {
+          "seed": 7,
+          "r2": 0.47473923485940395,
+          "mae": 15.459584942812228,
+          "rmse": 21.554885712223683
+        },
+        {
+          "seed": 8,
+          "r2": 0.494402410469746,
+          "mae": 14.778960899576015,
+          "rmse": 20.531709965911052
+        },
+        {
+          "seed": 9,
+          "r2": 0.4714091919927399,
+          "mae": 15.768055062003594,
+          "rmse": 21.575661319364347
+        }
+      ]
+    }
+  ],
+  "oos_split_definition": {
+    "oos_electrophile_ids": [
+      "e5"
+    ],
+    "oos_nucleophile_ids": [
+      "nG"
+    ],
+    "oos_ligand_names": [
+      "P(fur)3",
+      "P(o-Anis)3",
+      "PCy3 HBF4",
+      "PPh2Me",
+      "PPh3",
+      "PPhMe2",
+      "PPhtBu2",
+      "Ph-PhenCar-Phos",
+      "PnBu3 HBF4",
+      "X-Phos",
+      "tBPh-CPhos"
+    ]
+  },
+  "split_idx_sizes": {
+    "train": 637,
+    "substrate_oos": 195,
+    "catalyst_oos": 539,
+    "substrate_catalyst_oos": 165
+  },
+  "oos_results": [
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.35957229283890224,
+          "mae": 17.78836287179487,
+          "rmse": 22.412518679731207
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.32042118814992904,
+          "mae": 16.02641372912802,
+          "rmse": 23.935287901354645
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.10484700238661371,
+          "mae": 24.116412484848485,
+          "rmse": 28.641717444393294
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.11013500503903761,
+          "mae": 21.704152483817857,
+          "rmse": 26.41907876593569
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": -0.9311439526044332,
+          "mae": 33.2276507534388,
+          "rmse": 40.34837652990462
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -1.35275319432486,
+          "mae": 34.9306573971835,
+          "rmse": 41.79613959808968
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.5159038789990811,
+          "mae": 25.88295842889084,
+          "rmse": 34.48192002789472
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.26470107650716945,
+          "mae": 18.87320276591472,
+          "rmse": 24.897211340875756
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.4262944545389096,
+          "mae": 23.85675557836442,
+          "rmse": 32.54262502315657
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "84m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_84m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.04208718568266656,
+          "mae": 22.762796209807096,
+          "rmse": 28.58957082164701
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.24212070812486852,
+          "mae": 20.587753929144856,
+          "rmse": 25.27660612753732
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.09284641259682935,
+          "mae": 24.68209816126056,
+          "rmse": 28.48574292958503
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.44074746701633594,
+          "mae": 17.18079764102563,
+          "rmse": 20.943998015092696
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.2458633382470805,
+          "mae": 16.45822975881261,
+          "rmse": 25.214117239387647
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.06871385498571958,
+          "mae": 23.88857575757577,
+          "rmse": 28.169471886128687
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.5045926687631437,
+          "mae": 15.532874262491863,
+          "rmse": 19.71227833584214
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": -0.006162833967513048,
+          "mae": 23.48436710124113,
+          "rmse": 29.124124328248715
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.1484315852103062,
+          "mae": 24.10893311564128,
+          "rmse": 29.20118995134822
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.30332717126947095,
+          "mae": 24.15173205216951,
+          "rmse": 31.972922341977394
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.40989037127639905,
+          "mae": 17.509459109054433,
+          "rmse": 22.304119911405888
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.29030865457559774,
+          "mae": 23.252569355692756,
+          "rmse": 30.95243286554332
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "164m",
+      "remove_hs": false,
+      "repr_dim": 768,
+      "reaction_feature_dim": 2304,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_164m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        768
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.19793782522469616,
+          "mae": 21.61126435301452,
+          "rmse": 25.081853444987654
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.3226731871394153,
+          "mae": 19.438574550135602,
+          "rmse": 23.895596424150884
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.07124225536444206,
+          "mae": 25.240073167267028,
+          "rmse": 28.202774358503746
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.5369111175322459,
+          "mae": 27.12136779487179,
+          "rmse": 34.720021403511474
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.3241791906836602,
+          "mae": 16.259325194805193,
+          "rmse": 23.869016287168915
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.6540429836811197,
+          "mae": 28.047395757575764,
+          "rmse": 35.04462207547127
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -1.1963277653807638,
+          "mae": 36.699080929878434,
+          "rmse": 41.505359901699485
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": -0.09129958598831989,
+          "mae": 24.44944369569117,
+          "rmse": 30.33127984522671
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -1.8850842001855574,
+          "mae": 39.52857131819292,
+          "rmse": 46.283610634346815
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.9599472873405392,
+          "mae": 30.71574185657818,
+          "rmse": 39.2082811540125
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.32472809854761964,
+          "mae": 18.295794734416457,
+          "rmse": 23.859321001070683
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.8047355540994539,
+          "mae": 27.466667375248047,
+          "rmse": 36.60621046101716
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "310m",
+      "remove_hs": false,
+      "repr_dim": 1024,
+      "reaction_feature_dim": 3072,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_310m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1024
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.46131783555220673,
+          "mae": 26.282886566781222,
+          "rmse": 33.855400100324786
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.29114032250766153,
+          "mae": 18.909700202730647,
+          "rmse": 24.445497330554485
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.3341109401310147,
+          "mae": 25.012546034137443,
+          "rmse": 31.4734214981948
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.36268423482115375,
+          "mae": 17.58152297435897,
+          "rmse": 22.357999339889805
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.3885667012880094,
+          "mae": 15.23057209647496,
+          "rmse": 22.70352459165743
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": 0.10010135634070816,
+          "mae": 21.102184606060607,
+          "rmse": 25.849061736826194
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -7.3610835182167556,
+          "mae": 68.94251435969426,
+          "rmse": 80.98169991333303
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.18996254599310414,
+          "mae": 20.820043131699144,
+          "rmse": 26.131918242312196
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -8.139467685802554,
+          "mae": 69.65147570939497,
+          "rmse": 82.37746741167686
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -1.1039438128721204,
+          "mae": 29.53377438247057,
+          "rmse": 40.62306399010107
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.3406154790584369,
+          "mae": 18.125349907292538,
+          "rmse": 23.57697672183175
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.8492428558421181,
+          "mae": 26.582233416366645,
+          "rmse": 37.05484150221949
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "570m",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_570m_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": 0.08683425976571746,
+          "mae": 21.60725798290575,
+          "rmse": 26.762730013045807
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.29227191954592335,
+          "mae": 17.74641341581508,
+          "rmse": 24.42597759914425
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": 0.04476552554371471,
+          "mae": 22.31258149650927,
+          "rmse": 26.63195075295284
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "ExtraTrees",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.08380233112167934,
+          "mae": 22.4227764102564,
+          "rmse": 29.156181732066702
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.41230806505005635,
+          "mae": 15.341471651205934,
+          "rmse": 22.25838275073254
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.1488121163704419,
+          "mae": 23.39506739393938,
+          "rmse": 29.206027436881467
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "Ridge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -1.0033586758703814,
+          "mae": 33.3064445507343,
+          "rmse": 39.640120292166884
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.018225895456920882,
+          "mae": 23.159613665154342,
+          "rmse": 28.76898416661508
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.7371223424893756,
+          "mae": 28.48297996705951,
+          "rmse": 35.91395120374154
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "KernelRidge",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -1.060292488213554,
+          "mae": 29.768593589510182,
+          "rmse": 40.19944412234948
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.3613409886774791,
+          "mae": 18.350106102880282,
+          "rmse": 23.203487414058294
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.7083833000656774,
+          "mae": 25.18584559312391,
+          "rmse": 35.61563106312712
+        }
+      ]
+    },
+    {
+      "model_name": "unimolv2",
+      "model_size": "1.1B",
+      "remove_hs": false,
+      "repr_dim": 1536,
+      "reaction_feature_dim": 4608,
+      "n_samples": 1536,
+      "n_unique_smiles": 40,
+      "encoded_molecules": [
+        "electrophile_smiles",
+        "nucleophile_smiles",
+        "ligand_smiles"
+      ],
+      "excluded_molecules": [
+        "product_smiles"
+      ],
+      "cache_path": "/inspire/ssd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/GitHub/CatEmb/notebook/gen_desc/aryl_scope_unimolv2_1p1b_repr_map_no_product.npy",
+      "sample_smiles": "Brc1ccc2c(ccn2Cc2ccccc2)c1",
+      "sample_repr_shape": [
+        1536
+      ],
+      "model_type": "SVR",
+      "metrics_by_split": [
+        {
+          "split": "substrate_oos",
+          "n_samples": 195,
+          "r2": -0.2801670006224881,
+          "mae": 23.95881267094322,
+          "rmse": 31.687568985609765
+        },
+        {
+          "split": "catalyst_oos",
+          "n_samples": 539,
+          "r2": 0.36551025424663697,
+          "mae": 17.800534605680305,
+          "rmse": 23.12762541038682
+        },
+        {
+          "split": "substrate_catalyst_oos",
+          "n_samples": 165,
+          "r2": -0.13414325994771703,
+          "mae": 22.825615247559323,
+          "rmse": 29.0189666421701
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "task": "Thiol addition / acetal dataset",
+  "model_name": "rxnfp",
+  "searched_model_types": [
+    "ExtraTrees",
+    "Ridge",
+    "KernelRidge",
+    "SVR"
+  ],
+  "split_idx_sizes": {
+    "train": 384,
+    "substrate_oos": 216,
+    "catalyst_oos": 304,
+    "substrate_catalyst_oos": 171
+  },
+  "oos_split_definition": {
+    "oos_imine": [
+      "O=C(/N=C/c1ccc(Cl)cc1Cl)c1ccccc1"
+    ],
+    "oos_thiol": [
+      "Cc1ccccc1S"
+    ],
+    "n_oos_catalysts": 19,
+    "oos_catalysts": [
+      "O=P1(O)Oc2c(-c3c(C4CCCCC4)cc(C4CCCCC4)cc3C3CCCCC3)cc3ccccc3c2-c2c(c(-c3c(C4CCCCC4)cc(C4CCCCC4)cc3C3CCCCC3)cc3ccccc23)O1",
+      "CC(C)c1cc(C(C)C)c(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4c(C(C)C)cc(C(C)C)cc4C(C)C)cc4ccccc4c2-3)c(C(C)C)c1",
+      "COc1cccc(OC)c1-c1cc2ccccc2c2c1OP(=O)(O)Oc1c(-c3c(OC)cccc3OC)cc3ccccc3c1-2",
+      "Cc1cc(C)c(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4c(C)cc(C)cc4C)cc4ccccc4c2-3)c(C)c1",
+      "O=P1(O)Oc2c(-c3c4ccccc4cc4ccccc34)cc3ccccc3c2-c2c(c(-c3c4ccccc4cc4ccccc34)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(-c3ccc4ccc5cccc6ccc3c4c56)cc3ccccc3c2-c2c(c(-c3ccc4ccc5cccc6ccc3c4c56)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(-c3ccccc3OC(F)(F)F)cc3ccccc3c2-c2c(c(-c3ccccc3OC(F)(F)F)cc3ccccc23)O1",
+      "CC(C)(C)c1cc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4cc(C(C)(C)C)cc(C(C)(C)C)c4)cc4ccccc4c2-3)cc(C(C)(C)C)c1",
+      "CC(C)(C)c1cc(-c2cc3c(c4c2OP(=O)(O)Oc2c(-c5cc(C(C)(C)C)cc(C(C)(C)C)c5)cc5c(c2-4)CCCC5)CCCC3)cc(C(C)(C)C)c1",
+      "Cc1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(C)cc4)cc4ccccc4c2-3)cc1",
+      "CC(C)(C)c1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(C(C)(C)C)cc4)cc4ccccc4c2-3)cc1",
+      "O=P1(O)Oc2c(-c3ccc(-c4ccc5ccccc5c4)cc3)cc3ccccc3c2-c2c(c(-c3ccc(-c4ccc5ccccc5c4)cc3)cc3ccccc23)O1",
+      "COc1ccc(-c2cc3ccccc3c3c2OP(=O)(O)Oc2c(-c4ccc(OC)cc4)cc4ccccc4c2-3)cc1",
+      "COCc1cccc(-c2cc3c(c4c2OP(=O)(O)Oc2c(-c5cccc(COC)c5)cc5c(c2-4)CCCC5)CCCC3)c1",
+      "O=P1(O)Oc2c(-c3ccccc3)cc3ccccc3c2-c2c(c(-c3ccccc3)cc3ccccc23)O1",
+      "C[Si](c1ccccc1)(c1ccccc1)c1cc2ccccc2c2c1OP(=O)(O)Oc1c([Si](C)(c3ccccc3)c3ccccc3)cc3ccccc3c1-2",
+      "O=P1(O)Oc2c(Br)cc3c(c2-c2c4c(cc(Br)c2O1)CCCC4)CCCC3",
+      "O=P1(O)Oc2c([Si](c3ccccc3)(c3ccccc3)c3ccccc3)cc3ccccc3c2-c2c(c([Si](c3ccccc3)(c3ccccc3)c3ccccc3)cc3ccccc23)O1",
+      "O=P1(O)Oc2c(Cc3ccc(C(F)(F)F)cc3C(F)(F)F)cc3ccccc3c2-c2c(c(Cc3ccc(C(F)(F)F)cc3C(F)(F)F)cc3ccccc23)O1"
+    ]
+  },
+  "results": [
+    {
+      "strategy_name": "thiol_addition_rxnfp_all_with_catalyst_product",
+      "model_type": "ExtraTrees",
+      "reaction_feature_dim": 256,
+      "rxnfp_encoding": "Imine.Thiol.Catalyst>>Product",
+      "random": {
+        "metrics_summary": {
+          "r2_mean": 0.43473323644870776,
+          "r2_std": 0.020702425297261316,
+          "mae_mean": 0.3932258118469473,
+          "mae_std": 0.009690378009821317,
+          "rmse_mean": 0.5288241021106236,
+          "rmse_std": 0.013755599307087134
+        },
+        "metrics_by_seed": [
+          {
+            "seed": 0,
+            "r2": 0.44453495240573737,
+            "mae": 0.38608900591230744,
+            "rmse": 0.5146750222018123
+          },
+          {
+            "seed": 1,
+            "r2": 0.43705457334761477,
+            "mae": 0.3799343633020379,
+            "rmse": 0.5059957270053786
+          },
+          {
+            "seed": 2,
+            "r2": 0.45548920634665646,
+            "mae": 0.3885091774483831,
+            "rmse": 0.5297564456198367
+          },
+          {
+            "seed": 3,
+            "r2": 0.4115819385676922,
+            "mae": 0.402844910849802,
+            "rmse": 0.5395131102139996
+          },
+          {
+            "seed": 4,
+            "r2": 0.4049200707337074,
+            "mae": 0.4056003524501264,
+            "rmse": 0.5480186882964351
+          },
+          {
+            "seed": 5,
+            "r2": 0.43658577091993545,
+            "mae": 0.3883921539400378,
+            "rmse": 0.5267804851933559
+          },
+          {
+            "seed": 6,
+            "r2": 0.42337142752584944,
+            "mae": 0.40084210453877056,
+            "rmse": 0.5342730655421313
+          },
+          {
+            "seed": 7,
+            "r2": 0.45989300144945056,
+            "mae": 0.3884692078249136,
+            "rmse": 0.5192636906942504
+          },
+          {
+            "seed": 8,
+            "r2": 0.46066634984466626,
+            "mae": 0.3850064942738021,
+            "rmse": 0.5227975048975666
+          },
+          {
+            "seed": 9,
+            "r2": 0.41323507334576715,
+            "mae": 0.4065703479292926,
+            "rmse": 0.5471672814414696
+          }
+        ]
+      },
+      "oos": {
+        "metrics_by_split": [
+          {
+            "split": "substrate_oos",
+            "n_samples": 216,
+            "r2": 0.3409937987310654,
+            "mae": 0.4403546560132962,
+            "rmse": 0.5613374383020604
+          },
+          {
+            "split": "catalyst_oos",
+            "n_samples": 304,
+            "r2": 0.34869263178636356,
+            "mae": 0.4139181924086908,
+            "rmse": 0.5658556913615824
+          },
+          {
+            "split": "substrate_catalyst_oos",
+            "n_samples": 171,
+            "r2": -0.042391778371299704,
+            "mae": 0.5767039647046197,
+            "rmse": 0.7496447668095632
+          }
+        ]
+      }
+    },
+    {
+      "strategy_name": "thiol_addition_rxnfp_all_with_catalyst_product",
+      "model_type": "Ridge",
+      "reaction_feature_dim": 256,
+      "rxnfp_encoding": "Imine.Thiol.Catalyst>>Product",
+      "random": {
+        "metrics_summary": {
+          "r2_mean": 0.7822952226867944,
+          "r2_std": 0.010163536448804425,
+          "mae_mean": 0.2515730342783054,
+          "mae_std": 0.003920694191563846,
+          "rmse_mean": 0.3281091618450151,
+          "rmse_std": 0.007973747001388769
+        },
+        "metrics_by_seed": [
+          {
+            "seed": 0,
+            "r2": 0.7813546523614308,
+            "mae": 0.24653940423968357,
+            "rmse": 0.3229050552372195
+          },
+          {
+            "seed": 1,
+            "r2": 0.7666740695274256,
+            "mae": 0.25448461181274146,
+            "rmse": 0.3257580862240951
+          },
+          {
+            "seed": 2,
+            "r2": 0.7778326186018679,
+            "mae": 0.2531133316644411,
+            "rmse": 0.3383865955760143
+          },
+          {
+            "seed": 3,
+            "r2": 0.7715848583237833,
+            "mae": 0.2542784205473827,
+            "rmse": 0.33614097085792344
+          },
+          {
+            "seed": 4,
+            "r2": 0.7767589798536136,
+            "mae": 0.2569794344539121,
+            "rmse": 0.3356562333534971
+          },
+          {
+            "seed": 5,
+            "r2": 0.7954441121461225,
+            "mae": 0.24511239879807437,
+            "rmse": 0.3174108475851578
+          },
+          {
+            "seed": 6,
+            "r2": 0.7956626832550466,
+            "mae": 0.24878563104352977,
+            "rmse": 0.31804534570016507
+          },
+          {
+            "seed": 7,
+            "r2": 0.7853001915171488,
+            "mae": 0.2511474846341021,
+            "rmse": 0.32738884812485924
+          },
+          {
+            "seed": 8,
+            "r2": 0.7941967057913375,
+            "mae": 0.2500349144105204,
+            "rmse": 0.3229467425979499
+          },
+          {
+            "seed": 9,
+            "r2": 0.7781433554901671,
+            "mae": 0.25525471117866627,
+            "rmse": 0.3364528931932694
+          }
+        ]
+      },
+      "oos": {
+        "metrics_by_split": [
+          {
+            "split": "substrate_oos",
+            "n_samples": 216,
+            "r2": -0.5929601154470991,
+            "mae": 0.8025367199072885,
+            "rmse": 0.8727336245962884
+          },
+          {
+            "split": "catalyst_oos",
+            "n_samples": 304,
+            "r2": 0.5792425517555488,
+            "mae": 0.3437421862867945,
+            "rmse": 0.4548085275258874
+          },
+          {
+            "split": "substrate_catalyst_oos",
+            "n_samples": 171,
+            "r2": -0.2659882032320695,
+            "mae": 0.6977107546635412,
+            "rmse": 0.826142290362513
+          }
+        ]
+      }
+    },
+    {
+      "strategy_name": "thiol_addition_rxnfp_all_with_catalyst_product",
+      "model_type": "KernelRidge",
+      "reaction_feature_dim": 256,
+      "rxnfp_encoding": "Imine.Thiol.Catalyst>>Product",
+      "random": {
+        "metrics_summary": {
+          "r2_mean": 0.45029469959536417,
+          "r2_std": 0.020987749190538016,
+          "mae_mean": 0.3892387507517877,
+          "mae_std": 0.009280199441148055,
+          "rmse_mean": 0.5214772456931341,
+          "rmse_std": 0.013252562208062727
+        },
+        "metrics_by_seed": [
+          {
+            "seed": 0,
+            "r2": 0.4509427123760156,
+            "mae": 0.380524316659426,
+            "rmse": 0.5116978048816653
+          },
+          {
+            "seed": 1,
+            "r2": 0.4570847162556855,
+            "mae": 0.3751384603924726,
+            "rmse": 0.49691228705267704
+          },
+          {
+            "seed": 2,
+            "r2": 0.47501720437681805,
+            "mae": 0.3825225126038768,
+            "rmse": 0.5201702842348667
+          },
+          {
+            "seed": 3,
+            "r2": 0.40358226135272324,
+            "mae": 0.4057125524434123,
+            "rmse": 0.5431681310887764
+          },
+          {
+            "seed": 4,
+            "r2": 0.4572320212726234,
+            "mae": 0.39165607888527026,
+            "rmse": 0.5233772326039745
+          },
+          {
+            "seed": 5,
+            "r2": 0.4405435841878631,
+            "mae": 0.3879860382644018,
+            "rmse": 0.5249269882035185
+          },
+          {
+            "seed": 6,
+            "r2": 0.46010534532618774,
+            "mae": 0.3929321099196242,
+            "rmse": 0.5169752063427699
+          },
+          {
+            "seed": 7,
+            "r2": 0.4686316760194319,
+            "mae": 0.3863994647652461,
+            "rmse": 0.5150458405420398
+          },
+          {
+            "seed": 8,
+            "r2": 0.46056839608721467,
+            "mae": 0.3879094021013484,
+            "rmse": 0.5228449779738329
+          },
+          {
+            "seed": 9,
+            "r2": 0.4292390786990785,
+            "mae": 0.401606571482798,
+            "rmse": 0.5396537040072212
+          }
+        ]
+      },
+      "oos": {
+        "metrics_by_split": [
+          {
+            "split": "substrate_oos",
+            "n_samples": 216,
+            "r2": 0.09118547031145408,
+            "mae": 0.5011857471704309,
+            "rmse": 0.6591995292780373
+          },
+          {
+            "split": "catalyst_oos",
+            "n_samples": 304,
+            "r2": 0.3114262515883872,
+            "mae": 0.42861886311852504,
+            "rmse": 0.5818190319261741
+          },
+          {
+            "split": "substrate_catalyst_oos",
+            "n_samples": 171,
+            "r2": -0.4550192640709827,
+            "mae": 0.7031557716396584,
+            "rmse": 0.8856750215630544
+          }
+        ]
+      }
+    },
+    {
+      "strategy_name": "thiol_addition_rxnfp_all_with_catalyst_product",
+      "model_type": "SVR",
+      "reaction_feature_dim": 256,
+      "rxnfp_encoding": "Imine.Thiol.Catalyst>>Product",
+      "random": {
+        "metrics_summary": {
+          "r2_mean": 0.6571091381392838,
+          "r2_std": 0.023976793434004707,
+          "mae_mean": 0.310618802389263,
+          "mae_std": 0.012494326211569285,
+          "rmse_mean": 0.4116822273306882,
+          "rmse_std": 0.015419907532497246
+        },
+        "metrics_by_seed": [
+          {
+            "seed": 0,
+            "r2": 0.6843309160097831,
+            "mae": 0.29017368623101303,
+            "rmse": 0.38799019339796775
+          },
+          {
+            "seed": 1,
+            "r2": 0.6337686720905404,
+            "mae": 0.3148929524998741,
+            "rmse": 0.408123354449523
+          },
+          {
+            "seed": 2,
+            "r2": 0.6704776693999341,
+            "mae": 0.30722166109533816,
+            "rmse": 0.4121121591105488
+          },
+          {
+            "seed": 3,
+            "r2": 0.6176783852956187,
+            "mae": 0.32854213681389793,
+            "rmse": 0.43488400131260313
+          },
+          {
+            "seed": 4,
+            "r2": 0.631389017908706,
+            "mae": 0.33193899210231903,
+            "rmse": 0.4313123091145056
+          },
+          {
+            "seed": 5,
+            "r2": 0.6792796401562589,
+            "mae": 0.29989048609101465,
+            "rmse": 0.39744683028685696
+          },
+          {
+            "seed": 6,
+            "r2": 0.661254813386068,
+            "mae": 0.311923702267337,
+            "rmse": 0.40949798379253793
+          },
+          {
+            "seed": 7,
+            "r2": 0.6846269330121684,
+            "mae": 0.3029256737369953,
+            "rmse": 0.3967896672378082
+          },
+          {
+            "seed": 8,
+            "r2": 0.6643799485219105,
+            "mae": 0.3083127450849787,
+            "rmse": 0.41240953451225193
+          },
+          {
+            "seed": 9,
+            "r2": 0.6439053856118502,
+            "mae": 0.31036598796986137,
+            "rmse": 0.42625624009227836
+          }
+        ]
+      },
+      "oos": {
+        "metrics_by_split": [
+          {
+            "split": "substrate_oos",
+            "n_samples": 216,
+            "r2": 0.5186498584223864,
+            "mae": 0.3784012183586427,
+            "rmse": 0.47974428477003633
+          },
+          {
+            "split": "catalyst_oos",
+            "n_samples": 304,
+            "r2": 0.4617085636655276,
+            "mae": 0.387686752298484,
+            "rmse": 0.5144242440291494
+          },
+          {
+            "split": "substrate_catalyst_oos",
+            "n_samples": 171,
+            "r2": 0.07301265202693252,
+            "mae": 0.5504503238683777,
+            "rmse": 0.7069308400110357
+          }
+        ]
+      }
+    }
+  ]
+}

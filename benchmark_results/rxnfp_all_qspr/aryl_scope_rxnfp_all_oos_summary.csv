@@ -1,0 +1,13 @@
+strategy_name,model_type,reaction_feature_dim,rxnfp_encoding,split,n_samples,r2,mae,rmse
+aryl_scope_rxnfp_all_with_ligand_product,ExtraTrees,256,electrophile.nucleophile.ligand>>product,catalyst_oos,539,0.5332075729101022,15.079554508348798,19.837212319616217
+aryl_scope_rxnfp_all_with_ligand_product,KernelRidge,256,electrophile.nucleophile.ligand>>product,catalyst_oos,539,0.5229157604144767,15.4234359793928,20.05470489591886
+aryl_scope_rxnfp_all_with_ligand_product,SVR,256,electrophile.nucleophile.ligand>>product,catalyst_oos,539,0.5143752783674491,15.32973144487718,20.23341244240337
+aryl_scope_rxnfp_all_with_ligand_product,Ridge,256,electrophile.nucleophile.ligand>>product,catalyst_oos,539,0.32098660565111636,18.056914962883393,23.92532860994939
+aryl_scope_rxnfp_all_with_ligand_product,SVR,256,electrophile.nucleophile.ligand>>product,substrate_catalyst_oos,165,0.22675584775361135,20.93949450274663,23.96107548486998
+aryl_scope_rxnfp_all_with_ligand_product,KernelRidge,256,electrophile.nucleophile.ligand>>product,substrate_catalyst_oos,165,0.22543714586688346,19.98581714655039,23.981498565417777
+aryl_scope_rxnfp_all_with_ligand_product,ExtraTrees,256,electrophile.nucleophile.ligand>>product,substrate_catalyst_oos,165,0.15128441121466962,22.50834715151515,25.10319933995453
+aryl_scope_rxnfp_all_with_ligand_product,Ridge,256,electrophile.nucleophile.ligand>>product,substrate_catalyst_oos,165,-0.8340162369518773,30.54362190465602,36.901971856839715
+aryl_scope_rxnfp_all_with_ligand_product,ExtraTrees,256,electrophile.nucleophile.ligand>>product,substrate_oos,195,0.2862375505776331,20.468486666666667,23.660965172251892
+aryl_scope_rxnfp_all_with_ligand_product,SVR,256,electrophile.nucleophile.ligand>>product,substrate_oos,195,0.2572480609477159,20.6120777766151,24.136678477863807
+aryl_scope_rxnfp_all_with_ligand_product,KernelRidge,256,electrophile.nucleophile.ligand>>product,substrate_oos,195,0.24132245657106832,19.70964930458045,24.394067589700807
+aryl_scope_rxnfp_all_with_ligand_product,Ridge,256,electrophile.nucleophile.ligand>>product,substrate_oos,195,-0.4651001867930067,28.278156943149522,33.89918600991012
