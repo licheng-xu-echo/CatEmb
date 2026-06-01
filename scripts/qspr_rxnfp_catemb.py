@@ -21,10 +21,7 @@ from oos_splits import OOS_SPLITS, thiol_split as build_thiol_oos_split
 
 
 DEFAULT_CATEMB_DIMS = [8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
-DEFAULT_CATEMB_MODEL_ROOT = Path(
-    "/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/"
-    "global_user/8359-xulicheng/CatEmb/save_model"
-)
+DEFAULT_CATEMB_MODEL_ROOT = None
 MODEL_TYPES = ["ExtraTrees", "Ridge", "KernelRidge", "SVR"]
 
 
@@ -43,7 +40,7 @@ def parse_args() -> argparse.Namespace:
         "--catemb-model-root",
         type=Path,
         default=DEFAULT_CATEMB_MODEL_ROOT,
-        help="Directory containing CatEmb model checkpoints for different dimensions.",
+        help="Directory containing CatEmb model checkpoints. Defaults to catemb/model_path.",
     )
     parser.add_argument(
         "--batch-size",
@@ -95,32 +92,27 @@ def parse_args() -> argparse.Namespace:
 
 def resolve_catemb_model_paths(
     repo_root: Path,
-    model_root: Path,
+    model_root: Path | None,
     dims: list[int],
 ) -> dict[int, Path]:
+    root = model_root or (repo_root / "catemb" / "model_path")
     resolved_paths: dict[int, Path] = {}
 
-    if model_root.exists():
-        subdirs = sorted(path for path in model_root.iterdir() if path.is_dir())
-        for dim in dims:
-            matches = [
-                path
-                for path in subdirs
-                if f"dim{dim}" in path.name
-                and (path / "best_model.pt").exists()
-                and (path / "full_params.npy").exists()
-            ]
-            if matches:
-                resolved_paths[dim] = matches[0]
-
-    local_dim32 = repo_root / "catemb" / "model_path" / "dim32LN"
-    if 32 in dims and 32 not in resolved_paths and local_dim32.exists():
-        resolved_paths[32] = local_dim32
+    for dim in dims:
+        candidates = [root / f"dim{dim}LN", root / f"dim{dim}"]
+        if root.exists():
+            candidates.extend(
+                path for path in sorted(root.iterdir()) if path.is_dir() and f"dim{dim}" in path.name
+            )
+        for candidate in candidates:
+            if (candidate / "best_model.pt").exists() and (candidate / "full_params.npy").exists():
+                resolved_paths[dim] = candidate
+                break
 
     missing_dims = [dim for dim in dims if dim not in resolved_paths]
     if missing_dims:
         raise FileNotFoundError(
-            f"Could not resolve CatEmb model paths for dimensions: {missing_dims}"
+            f"Could not resolve CatEmb model paths in {root} for dimensions: {missing_dims}"
         )
 
     return resolved_paths

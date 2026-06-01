@@ -21,7 +21,7 @@ from sklearn.svm import SVR
 from oos_splits import thiol_split as build_thiol_oos_split
 
 DIMS = [8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
-MODEL_ROOT = Path("/inspire/hdd/tenant_predefaa-9a1b-4522-bb10-8850f313be13/global_user/8359-xulicheng/CatEmb/save_model")
+MODEL_ROOT = None
 MODEL_TYPES = ["ExtraTrees", "Ridge", "KernelRidge", "SVR"]
 OOS_SPLITS = ["substrate_oos", "catalyst_oos", "substrate_catalyst_oos"]
 
@@ -42,19 +42,19 @@ def parse_args():
 
 
 def model_paths(root, dims, repo):
+    root = root or (repo / "catemb" / "model_path")
     paths = {}
-    if root.exists():
-        dirs = [p for p in root.iterdir() if p.is_dir()]
-        for dim in dims:
-            hit = [p for p in dirs if f"dim{dim}" in p.name and (p / "best_model.pt").exists() and (p / "full_params.npy").exists()]
-            if hit:
-                paths[dim] = sorted(hit)[0]
-    local = repo / "catemb" / "model_path" / "dim32LN"
-    if 32 in dims and 32 not in paths and local.exists():
-        paths[32] = local
+    for dim in dims:
+        candidates = [root / f"dim{dim}LN", root / f"dim{dim}"]
+        if root.exists():
+            candidates.extend(path for path in sorted(root.iterdir()) if path.is_dir() and f"dim{dim}" in path.name)
+        for candidate in candidates:
+            if (candidate / "best_model.pt").exists() and (candidate / "full_params.npy").exists():
+                paths[dim] = candidate
+                break
     missing = [d for d in dims if d not in paths]
     if missing:
-        raise FileNotFoundError("Missing CatEmb models: %s" % missing)
+        raise FileNotFoundError("Missing CatEmb models in %s: %s" % (root, missing))
     return paths
 
 
