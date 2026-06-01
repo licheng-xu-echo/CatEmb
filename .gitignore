@@ -6,7 +6,6 @@ download/dataset/*
 __pycache__/
 .ipynb_checkpoints
 RXNEmb/
-gen_desc/
 model_path/
 save_model/
 temp/
@@ -14,4 +13,10 @@ for_manu/
 dev/
 dataset/
 build/
+*/dropped
 *.tar.gz
+unimol*.log
+notebook/**/*.png
+notebook/gen_desc/
+notebook/recommend_results/**/*.csv
+notebook/recommend_results/**/*.npy
