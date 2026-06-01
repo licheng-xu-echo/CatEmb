@@ -74,7 +74,50 @@ def recommend_by_random(cur_score,cur_cat,pool_cat,batch_size=5):
     print(f"Max score: {np.max(cur_score):.4f}, {len(cur_score)}")
     return cur_score,cur_cat,pool_cat
 
-def recommend_by_model(cur_score,cur_cat,pool_cat,rct12_pdt_pair_set,rxn_smi_fp_map,rxn_smi_label_map,model,batch_size=5):
+def _rxnfp_key(rxn_smi, rxn_smi_fp_map):
+    if rxn_smi in rxn_smi_fp_map:
+        return rxn_smi
+    rct_smi, _, pdt_smi = rxn_smi.split(">")
+    rxn_smi_wo_cat = f"{rct_smi}>>{pdt_smi}"
+    if rxn_smi_wo_cat in rxn_smi_fp_map:
+        return rxn_smi_wo_cat
+    return rxn_smi
+
+
+def _catemb_feature(cat_smi, cat_smi_desc_map, cat_smi_to_extra_smi_lst_map=None):
+    desc_lst = [cat_smi_desc_map[cat_smi]]
+    if cat_smi_to_extra_smi_lst_map is not None:
+        for extra_smi in cat_smi_to_extra_smi_lst_map.get(cat_smi, []):
+            #print(f"extra_smi: {extra_smi}, cat_smi: {cat_smi}")
+            desc_lst.append(cat_smi_desc_map[extra_smi])
+    return np.concatenate(desc_lst)
+
+
+def _build_model_x(rxn_smi_lst, rxn_smi_fp_map, cat_smi_desc_map=None, cat_smi_to_extra_smi_lst_map=None):
+    rxn_fp_arr = np.array([rxn_smi_fp_map[_rxnfp_key(smi, rxn_smi_fp_map)] for smi in rxn_smi_lst])
+    if cat_smi_desc_map is None:
+        return rxn_fp_arr
+    cat_desc_arr = np.array([
+        _catemb_feature(smi.split(">")[1], cat_smi_desc_map, cat_smi_to_extra_smi_lst_map)
+        for smi in rxn_smi_lst
+    ])
+    return np.concatenate([rxn_fp_arr, cat_desc_arr], axis=1)
+
+
+def recommend_by_model(
+    cur_score,
+    cur_cat,
+    pool_cat,
+    rct12_pdt_pair_set,
+    rxn_smi_fp_map,
+    rxn_smi_label_map,
+    model,
+    batch_size=5,
+    catemb_calc=None,
+    cat_smi_desc_map=None,
+    cat_smi_to_extra_smi_lst_map=None,
+    catemb_batch_size=64,
+):
     
     cur_cat_smi_lst = [item[0] for item in cur_cat]
     pool_cat_smi_lst = [item[0] for item in pool_cat]
@@ -88,9 +131,29 @@ def recommend_by_model(cur_score,cur_cat,pool_cat,rct12_pdt_pair_set,rxn_smi_fp_
         for rct12_pdt_pair in rct12_pdt_pair_set:
             rxn_smi = f"{rct12_pdt_pair[0]}.{rct12_pdt_pair[1]}>{cat_smi}>{rct12_pdt_pair[2]}"
             pool_rxn_smi_lst.append(rxn_smi)
-    cur_train_x = np.array([rxn_smi_fp_map[smi] for smi in cur_rxn_smi_lst])
+
+    if cat_smi_desc_map is None and catemb_calc is not None:
+        desc_smi_lst = cur_cat_smi_lst + pool_cat_smi_lst
+        if cat_smi_to_extra_smi_lst_map is not None:
+            for cat_smi in desc_smi_lst.copy():
+                desc_smi_lst.extend(cat_smi_to_extra_smi_lst_map.get(cat_smi, []))
+        desc_smi_lst = sorted(set(desc_smi_lst))
+        desc_arr = catemb_calc.gen_desc(desc_smi_lst, batch_size=catemb_batch_size)
+        cat_smi_desc_map = {smi: np.asarray(desc) for smi, desc in zip(desc_smi_lst, desc_arr)}
+
+    cur_train_x = _build_model_x(
+        cur_rxn_smi_lst,
+        rxn_smi_fp_map,
+        cat_smi_desc_map=cat_smi_desc_map,
+        cat_smi_to_extra_smi_lst_map=cat_smi_to_extra_smi_lst_map,
+    )
     cur_train_y = np.array([rxn_smi_label_map[smi] for smi in cur_rxn_smi_lst])
-    pool_x = np.array([rxn_smi_fp_map[smi] for smi in pool_rxn_smi_lst])
+    pool_x = _build_model_x(
+        pool_rxn_smi_lst,
+        rxn_smi_fp_map,
+        cat_smi_desc_map=cat_smi_desc_map,
+        cat_smi_to_extra_smi_lst_map=cat_smi_to_extra_smi_lst_map,
+    )
     model.fit(cur_train_x,cur_train_y)
     pool_pred = model.predict(pool_x)
     pool_cat_smi_pred_map = {}
